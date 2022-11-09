@@ -1,0 +1,15 @@
+#data{
+    display: flex;
+
+}
+#all_filters{
+    width: 30%;
+}
+
+/* #all_filters>*{
+    display: flex;
+    flex-direction: column;
+} */
+#data{
+    
+}

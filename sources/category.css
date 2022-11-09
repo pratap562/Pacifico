@@ -1,15 +1,29 @@
-#data{
+#Products_data{
     display: flex;
 
 }
 #all_filters{
     width: 30%;
 }
+img{
+    width: 100%;
+}
 
-/* #all_filters>*{
-    display: flex;
-    flex-direction: column;
-} */
+
 #data{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+}
+.prices{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
     
+}
+.prices>*{
+    margin: 0;
+
 }

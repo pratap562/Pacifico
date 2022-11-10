@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+div {
+  /* border: 1px solid; */
+  margin: auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+div > img {
+  width: 8%;
+}
+form {
+  width: 30%;
+  /* height: 400px; */
+  /* border: 1px solid; */
+  margin: auto;
+  /* padding-left: 20px; */
+  padding: 20px 0px 20px 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+input {
+  padding: 10px;
+  width: 90%;
+  margin: 10px 0px;
+  border: 1px solid;
+  border-color: rgb(236, 230, 230);
+}
+
+a {
+  color: rgb(40, 40, 238);
+}
+p,
+h1 {
+  text-align: center;
+  width: 90%;
+}
+#signin {
+  background-color: rgb(95, 95, 243);
+  color: white;
+}

@@ -1,9 +1,125 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+  "posts": [
+    {
+      "id": "1",
+      "name": "Nike-shirt",
+      "image": "",
+      "price": "1799",
+      "category": "Shirts",
+      "status": "Published",
+      "inventory": "665"
+    },
+    {
+      "id": "2",
+      "name": "H&M-trousers",
+      "image": "",
+      "price": "2355",
+      "category": "Trousers",
+      "status": "Published",
+      "inventory": "223"
+    },
+    {
+      "id": "3",
+      "name": "H&M-shirt",
+      "image": "",
+      "price": "2000",
+      "category": "Shirts",
+      "status": "Published",
+      "inventory": "876"
+    },
+    {
+      "id": "4",
+      "name": "Nike-trackpants",
+      "image": "",
+      "price": "1899",
+      "category": "Trousers",
+      "status": "Published",
+      "inventory": "993"
+    },
+    {
+      "id": "5",
+      "name": "Nike-shoes",
+      "image": "",
+      "price": "22345",
+      "category": "Footwear",
+      "status": "Published",
+      "inventory": "22"
+    },
+    {
+      "id": "6",
+      "name": "Nike-sweater",
+      "image": "",
+      "price": "3455",
+      "category": "Winter-wear",
+      "status": "Published",
+      "inventory": "76"
+    },
+    {
+      "id": "7",
+      "name": "H&M-sweatshirt",
+      "image": "",
+      "price": "2355",
+      "category": "Winter-wear",
+      "status": "Published",
+      "inventory": "90"
+    },
+    {
+      "id": "8",
+      "name": "H&M-shirt",
+      "image": "",
+      "price": "899",
+      "category": "Shirts",
+      "status": "Published",
+      "inventory": "126"
+    },
+    {
+      "name": "Wildcraft",
+      "category": "bag",
+      "price": "2222",
+      "inventory": "33",
+      "image": "",
+      "id": "WG18D9u"
+    },
+    {
+      "name": "hrx",
+      "category": "shoe",
+      "price": "999",
+      "inventory": "44",
+      "image": "",
+      "status": "Published",
+      "id": "B5JsCBd"
+    },
+    {
+      "name": "J&J jeans",
+      "category": "Trousers",
+      "price": "4001",
+      "inventory": "88",
+      "image": "",
+      "status": "Published",
+      "id": "RL7Kl0G"
+    }
+  ],
+  "customer": [
+    {
+      "name": "Lebron James",
+      "email": "lebron@lakers.com",
+      "orders": "4",
+      "amount": "254$",
+      "id": "1"
+    },
+    {
+      "name": "Lewis Hamilton",
+      "email": "lewis@amg.com",
+      "orders": "7",
+      "amount": "776$",
+      "id": "2"
+    },
+    {
+      "name": "Charles Leclerc",
+      "email": "leclerc@ferrari.com",
+      "orders": "5",
+      "amount": "540$",
+      "id": "3"
+    }
+  ]
+}

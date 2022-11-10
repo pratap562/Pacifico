@@ -65,3 +65,9 @@ const profile = async (username,token) => {
     let user_name = data.username
     localStorage.setItem("name",JSON.stringify(user_name))
 }
+
+//End of day-2
+
+
+//start of day-3
+

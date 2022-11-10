@@ -3,7 +3,14 @@
 
 }
 #all_filters{
-    width: 30%;
+    width: 35%;
+    padding: 10px;
+    position: sticky;
+    top: 10px;
+    border: 1px solid green;
+}
+#all_filters>*{
+    margin: 10px 0;
 }
 img{
     width: 100%;
@@ -26,4 +33,8 @@ img{
 .prices>*{
     margin: 0;
 
+}
+.card:hover{
+    border: 1px solid green;
+    cursor: pointer;
 }

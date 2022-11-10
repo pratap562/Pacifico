@@ -100,6 +100,7 @@ function Click_unclick_2(el,i){
             document.getElementById(`color${ind}`).checked=false;
         }      
     })
+    
 }
 
 

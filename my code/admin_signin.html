@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<style>
+    #container{
+        display: flex;
+        flex-flow: column;
+        width: 60%;
+        margin-left: 40%;
+        margin-top: 10%;
+    }
+    input{
+        width: 30%;
+    }
+    #email{
+        margin-bottom: 1%;
+    }
+    #login{
+        width: 31%;
+        margin-top: 2%;
+        padding: 1%;
+        border-radius: 7px;
+        background-color: rgb(114, 49, 166);
+        color: wheat;
+    }
+</style>
+<body>
+    <div id="container">    
+        
+        <h1>Welcome back!</h1>
+        <p>It's great to see you 👋</p>
+        <p>Log in to your account below</p>
+        <input type="email" id="email" placeholder="Email...">
+        <input type="password" id="password" placeholder="Password...">
+        <button id="login">Continue</button>
+    </div>
+</body>
+</html>
+<script src="./admin_signin.js"></script>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin-panel</title>
+</head>
+<style>
+    body{
+        display: flex;
+    }
+    #dashboard{
+        flex:3;
+    }
+    #display{
+        flex: 7;
+    }
+   
+</style>
+<body>
+    <div id="dashboard">
+        <h4>Pacifico Store</h4>
+        <div id="elements">
+            <h5 id="order">Orders</h5>
+            <h5 id="product_list">Product List</h5>
+            <h5 id="add_product">Add Products</h5>
+            <h5 id="customer">Customers</h5>
+        </div>
+    </div>
+    <div id="display">
+        <div id="order_div">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>customer</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="order_body">
+                    <tr>
+                        <td>#1</td>
+                        <td>Lebron</td>
+                        <td>200$</td>
+                    </tr>
+                    <tr>
+                        <td>#2</td>
+                        <td>James</td>
+                        <td>150$</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="product_list_div">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th>Inventory</th>
+                    </tr>
+                </thead>
+                <tbody id="product_list_body">
+                    <tr>
+                        <td>Nike T-Shirt</td>
+                        <td>T-Shirt</td>
+                        <td>Published</td>
+                        <td>499</td>
+                    </tr>
+                    <tr>
+                        <td>H&M-trousers</td>
+                        <td>Trousers</td>
+                        <td>Yet to be published</td>
+                        <td>277</td>
+                    </tr>
+                    <tr>
+                        <td>Wildcraft-Sweatshirt</td>
+                        <td>Winter Wear</td>
+                        <td>Published</td>
+                        <td>65</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="add_product_div">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Type">
+            <input type="text" placeholder="Price">
+            <input type="text" placeholder="Stock">
+            <button>Add Product</button>
+        </div>
+        <div id="customers_div">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Number of Orders</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lebron</td>
+                        <td>lebron@pacifico.com</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Lewis</td>
+                        <td>lewis@amg.com</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+<script src="./admin.js"></script>

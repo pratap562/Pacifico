@@ -121,28 +121,80 @@ input:focus {
   font-size: 1.1vw;
 }
 #profiledropdown {
-  position: absolute;
-  top: 12vh;
-  left: 0px;
-  width: 400%;
+  height: 400px;
+  position: fixed;
+  padding-top: 20px;
+  /* padding-right: 20px; */
+  padding-left: 15px;
+  top: 12.5vh;
+  /* left; */
+  /* left: 0; */
+  right: 100px;
+  width: 300px;
   z-index: 10;
   background-color: white;
+  /* padding-right: 50px; */
   /* height: 300px; */
   /* opacity: 0; */
   visibility: hidden;
   /* transition: 0.5s; */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+#profile p,
+li {
+  font-size: 15px;
+  color: #3e4152;
+}
+#profiledropdown p:first-child {
+  font-size: 16px;
+  font-weight: 600;
+}
+#profiledropdown p:nth-child(2) {
+  margin-bottom: 15px;
+  /* color: red; */
+}
+#profiledropdown p:first-child {
+}
 #profile:hover {
-  border-bottom: 3px solid red;
+  border-bottom: 5px solid red;
+}
+#profiledropdown > ul > li:first-child {
+  width: 140px;
+  margin-left: 10px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: red;
+  border: 1px solild red;
+}
+hr {
+  /* height: ; */
+  /* font-weight: 1px; */
+  border: 0.1px solid rgb(230, 230, 230);
+  /* color: rgb(251, 251, 251); */
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#profiledropdown > ul > li > a {
+  color: red;
+}
+#profiledropdown li:first-child:hover {
+  border: 1px solid red;
 }
 #profiledropdown li:hover {
-  font-weight: 500;
-  color: red;
+  font-weight: 600;
+  /* color: red; */
 }
 /* #profile:hover{
   visibility: ;
 } */
+#profiledropdown li:first-child {
+  margin-bottom: 5px;
+  border: 1px solid black;
+}
 .icon {
   height: 100%;
   display: flex;
@@ -161,7 +213,7 @@ input:focus {
   /* top: 133%; */
 }
 #profiledropdown > ul {
-  padding-left: 20px;
+  /* padding-left: 10px; */
 }
 #profiledropdown > ul > li {
   list-style: none;
@@ -169,10 +221,12 @@ input:focus {
 }
 #profiledropdown > ul > li > a {
   text-decoration: none;
+  /* color: red; */
 }
 /* megamenu */
 
 .megamenu {
+  color: #282c3f;
   position: absolute;
   top: 100%;
   left: 0px;

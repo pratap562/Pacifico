@@ -43,15 +43,23 @@ let navbar = () => {
             <div><p>profile</p></div>
           </a>
           <div id="profiledropdown">
+            <p>Welcome</p>
+            <p>To access account and manage orders</p>
+
             <ul>
-              <li><a href="login.html">login/signup</a></li>
-              <li>Wishlist</li>
+              <li><a href="signup.html">Login/Signup</a></li>
+              <hr>
               <li>order</li>
+              <li>Wishlist</li>
+              <li>Gift Card</li>
+              <li>Myntra Insider</li>
+              <hr>
+              <li>Myntra Credit</li>
               <li>coupen</li>
-              <li>Gift card</li>
-              <li>contact us</li>
-              <li>Saved cards</li>
+              <li>Saved cards</li> 
+              <li>Saved VPA</li> 
               <li>Saved Address</li>
+              <li>
             </ul>
           </div>
         </div>

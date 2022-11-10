@@ -114,9 +114,9 @@ window.onload = () => {
                         console.log(item)
                         li.innerText = item.name
                         if (ind != 0) {
-                            li.style.fontSize = '14px'
+                            li.style.fontSize = '15px'
                         } else {
-                            li.style.fontSize = '14px'
+                            li.style.fontSize = '15px'
                         }
                         if (item.value) {
                             li.onclick = () => {
@@ -147,6 +147,8 @@ window.onload = () => {
             // document.querySelector('.megamenu').style.opacity = '0'
         }
     })
+
+    ifLogin()
 }
 
 let openProdPage = ({ value }) => {
@@ -154,6 +156,21 @@ let openProdPage = ({ value }) => {
     location = './prod.html'
     console.log(value)
 
+}
+let isLogin = false
+let userDetail = {
+    name: 'Pratap',
+    email: 'kumpratap562@gmail.com'
+}
+const ifLogin = () => {
+    if (isLogin) {
+        let temp = document.querySelector('#profiledropdown > ul > li:first-child')
+        temp.remove()
+        document.querySelector('#profiledropdown p:first-child').innerText = 'Hello ' + userDetail.name
+        document.querySelector('#profiledropdown p:first-child').style.color = 'black'
+        document.querySelector('#profiledropdown p:nth-child(2)').innerText = userDetail.email
+
+    }
 }
 
 // localStorage.setItem('myCat', 'Tom');

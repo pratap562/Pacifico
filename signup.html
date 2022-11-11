@@ -12,13 +12,16 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles/loader.css" />
+    <link rel="stylesheet" href="./styles/button.css" />
   </head>
   <body>
     <div>
       <img src="./image/IMG_20221109_095901.png" alt="" />
     </div>
-    <form action="" id="signupform">
+    <form action="" id="signupform" onsubmit="Register(event)">
       <h1>signup</h1>
+      <div id="error">Register fail user Alredy exist sorry</div>
       <label for="name">Full name</label>
       <br />
       <input
@@ -47,9 +50,13 @@
         <a href="">Terms of service</a> and acnowledge the
         <a href="">Privacy policy</a>
       </p>
-      <input type="submit" placeholder="signup" />
+      <input type="submit" class="button-36" placeholder="signup" />
       <p>Alredy have and account ? <a href="signin.html">sign in</a></p>
     </form>
+    <div id="loder">
+      <div id="spin"></div>
+    </div>
   </body>
 </html>
 <script src="/script/signup.js"></script>
+<script src="./script/auth.js"></script>

@@ -121,7 +121,7 @@ input:focus {
   font-size: 1.1vw;
 }
 #profiledropdown {
-  height: 400px;
+  height: 420px;
   position: fixed;
   padding-top: 20px;
   /* padding-right: 20px; */
@@ -140,9 +140,9 @@ input:focus {
   /* transition: 0.5s; */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#profile p,
+#profiledropdown p,
 li {
-  font-size: 15px;
+  font-size: 14px;
   color: #3e4152;
 }
 #profiledropdown p:first-child {

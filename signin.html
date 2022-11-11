@@ -12,13 +12,16 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles/loader.css" />
+    <link rel="stylesheet" href="./styles/button.css" />
   </head>
   <body>
     <div>
       <img src="./image/IMG_20221109_095901.png" alt="" />
     </div>
-    <form action="" id="form">
+    <form action="" id="loginform" onsubmit="Login(event)">
       <h1>Login</h1>
+      <div id="error">lsdfalskjdflasjfalsf jslfaksfjalksf</div>
       <label for="email">Email</label>
       <br />
       <input type="email" id="email" placeholder="Enter email" required />
@@ -26,12 +29,27 @@
       <br />
       <label for="Password">Password</label>
       <br />
-      <input type="text" id="password" placeholder="Enter password" required />
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+        required
+      />
       <br />
-      <input type="submit" name="" id="signin" />
+      <input
+        type="submit"
+        class="button-36"
+        name=""
+        id="signin"
+        value="SIGN IN"
+      />
       <br />
       <p>dont have an account <a href="signup.html">sign up</a></p>
     </form>
+    <div id="loder">
+      <div id="spin"></div>
+    </div>
   </body>
 </html>
-<script src="/script/"></script>
+<script src="/script/auth.js"></script>
+<!-- <script src="./script/signin.js"></script> -->

@@ -59,6 +59,9 @@ let navbar = () => {
               <li>Saved cards</li> 
               <li>Saved VPA</li> 
               <li>Saved Address</li>
+              <hr id="lastHr">
+              <li id="editProfileLi">Edit Profile</li>
+              <li id="logoutLi">Logout</li>
               <li>
             </ul>
           </div>

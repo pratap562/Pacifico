@@ -1,0 +1,37 @@
+.loder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 48.5%;
+  /* top: auto;
+    left: auto; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.spin {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  left: 7.5px;
+  top: 7.5px;
+  /* top: 50%;
+    left: 50%; */
+  align-items: center;
+  /* #e66465, #9198e5 */
+  border: 3px solid pink;
+  border-top: none;
+  border-right: none;
+  /* transform: rotate(300deg); */
+  animation: spinner 0.54s infinite linear;
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

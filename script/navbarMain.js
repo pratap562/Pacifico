@@ -74,6 +74,7 @@ const manAllData = [
 
 console.log(manAllData);
 window.onload = () => {
+    ifLogin()
     // when we hover then show
     document.querySelectorAll('nav > ul > li').forEach((el, i) => {
         el.onmouseenter = () => {
@@ -157,20 +158,36 @@ let openProdPage = ({ value }) => {
     console.log(value)
 
 }
-let isLogin = false
-let userDetail = {
-    name: 'Pratap',
-    email: 'kumpratap562@gmail.com'
-}
 const ifLogin = () => {
-    if (isLogin) {
+    let userDetail = localStorage.getItem('userDetail')
+    userDetail = JSON.parse(userDetail) || null
+    console.log(userDetail, 'userdetail');
+    // let isLogin = true
+    if (userDetail) {
+        console.log('haya')
+        // when user login we should show user detail insted of login logout button
         let temp = document.querySelector('#profiledropdown > ul > li:first-child')
         temp.remove()
         document.querySelector('#profiledropdown p:first-child').innerText = 'Hello ' + userDetail.name
         document.querySelector('#profiledropdown p:first-child').style.color = 'black'
         document.querySelector('#profiledropdown p:nth-child(2)').innerText = userDetail.email
 
+        logoutFun()
+    } else {
+        //delete logout and profileDetail if User isn't login
+        console.log('hello')
+        document.getElementById('lastHr').remove()
+        document.getElementById('editProfileLi').remove()
+        document.getElementById('logoutLi').remove()
+        // if user is not login then we should these things
+        // logoutFun()
     }
 }
 
+const logoutFun = () => {
+    document.getElementById('logoutLi').onclick = () => {
+        localStorage.setItem('userDetail', null)
+        location.reload()
+    }
+}
 // localStorage.setItem('myCat', 'Tom');

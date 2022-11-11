@@ -110,7 +110,7 @@ const menFstDiv = [
     { name: "New Arrivals", value: null },
     { name: "View All", value: "new-arrivals" },
     { name: "Clothes", value: "new-arrivals" },
-    { name: "Shoes and Accessories", value: "new-arrivals" },
+    { name: "Shoes and Accessories", value: "men_shoes" },
     { name: "Sportswear", value: "men_newarrivals_sportswear" },
 ]
 
@@ -121,6 +121,10 @@ const menSndDiv = [
     { name: "Loungewear", value: "men_loungewear" }
 ]
 
+
+// menThirdDiv
+// manTopWear
+//botManWear
 const menThirdDiv = [
     { name: "Shop by Product", value: null },
     { name: "View All", value: "men_all" },
@@ -205,6 +209,7 @@ const wmnFstDiv = [
 
 
 // fetching(wmnFstDiv[ind].value)
+//wenSnDiv
 const wmnSndDiv = [
     { name: "Shop by Product", value: null },
     { name: "View All", value: "ladies_all" },

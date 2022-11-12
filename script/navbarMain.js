@@ -154,7 +154,7 @@ window.onload = () => {
 
 let openProdPage = ({ value }) => {
     localStorage.setItem('category', value)
-    location = './prod.html'
+    location = './category.html'
     console.log(value)
 
 }

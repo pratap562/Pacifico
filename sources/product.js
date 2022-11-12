@@ -136,9 +136,71 @@ function Append(info) {
     pro_prices[3]=size
     console.log("added to cart",pro_prices);
     localStorage.setItem('p_details',JSON.stringify(pro_prices))
+
+    addCartData()
   });
   let wishlist = document.getElementById("wishlist");
   wishlist.addEventListener("click", () => {
     console.log("added to wishlist");
+    
+    addWishData()
   });
+}
+
+const addWishData = async () => {
+
+  let customerData = JSON.parse(localStorage.getItem("userDetail")) || []
+  let productData = JSON.parse(localStorage.getItem("product_detail")) || []
+  let imageData = JSON.parse(localStorage.getItem("pro_images")) || []
+  let priceData = JSON.parse(localStorage.getItem("prices")) || []
+
+    let send_data = {
+      customer_Id : customerData.token,
+      product_Name : productData.name,
+      image_url : imageData[0].url,
+      discounted_price : `0 ${priceData[0]}`,
+      actual_price : `0 ${priceData[1]}`,
+      discount : `${priceData[2]}`
+    }
+
+    if(customerData.token === undefined){
+      window.location.href = "signup.html"
+    }else{
+      let res = await fetch(`http://localhost:3000/Whishlist`,{
+        method:"POST",
+        body:JSON.stringify(send_data),
+        headers:{
+          "Content-Type":"application/json"
+        }
+      })
+    }
+  
+}
+
+const addCartData = async () => {
+  let customerData = JSON.parse(localStorage.getItem("userDetail")) || []
+  let productData = JSON.parse(localStorage.getItem("product_detail")) || []
+  let imageData = JSON.parse(localStorage.getItem("pro_images")) || []
+  let priceData = JSON.parse(localStorage.getItem("prices")) || []
+
+    let send_data = {
+      customer_Id : customerData.token,
+      product_Name : productData.name,
+      image_url : imageData[0].url,
+      discounted_price : `0 ${priceData[0]}`,
+      actual_price : `0 ${priceData[1]}`,
+      discount : `${priceData[2]}`
+    }
+
+    if(customerData.token === undefined){
+      window.location.href = "signup.html"
+    }else{
+      let res = await fetch(`http://localhost:3000/Cart`,{
+        method:"POST",
+        body:JSON.stringify(send_data),
+        headers:{
+          "Content-Type":"application/json"
+        }
+      })
+    }
 }

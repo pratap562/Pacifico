@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Category</title>
-    <link rel="stylesheet" href=".\styles\category.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href=".\styles\category.css" />
+    <link rel="stylesheet" href="./styles/loader.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
     <div id="Products_data">
-        <div id="all_filters">
-            <div id="people_type">
-
-            </div>
-            <div id="brand">
-                <div>Brands</div>
-                
-            </div>
-            <div id="price">
-                <div>Price</div>
-                <div><input type="radio"> <span>500-2000</span></div>
-                <div><input type="radio"> <span>2000-6000</span></div>
-                <div><input type="radio"> <span>6000-10000</span> </div>                              
-            </div>
-            <div id="colors">
-                <div>Colors</div>
-                  
-            </div>
+      <div id="all_filters">
+        <div id="people_type">
+          <div>Gender</div>
         </div>
-        <div id="data">
-            <!-- <p>data is here</p> -->
-            
+        <div id="brand">
+          <div>Brands</div>
         </div>
-        
+        <div id="price">
+          <div>Price</div>
+        </div>
+        <div id="colors">
+          <div>Colors</div>
+        </div>
+      </div>
+      <div id="data">
+        <!-- <p>data is here</p> -->
+      </div>
     </div>
-</body>
-<script src=".\sources\category.js"></script>
+    <div id="loder">
+      <div id="spin"></div>
+    </div>
+  </body>
+  <script type="module" src="./script/navbarMain.js"></script>
+  <script src=".\sources\category.js"></script>
 </html>

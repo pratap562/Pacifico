@@ -1,5 +1,4 @@
 * {
-  /* background-color: white; */
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -7,12 +6,9 @@
     Helvetica, Arial, sans-serif;
 }
 
-/* #pro-container:nth-last-of-type() */
-
 #navbar {
   width: 100%;
   height: 90px;
-  /* border: 1px solid blue; */
   background-color: white;
   display: flex;
   justify-content: space-around;
@@ -24,9 +20,7 @@
 }
 
 #navbar > #logo {
-  /* border: 1px solid red; */
   width: 5vw;
-  /* height: 100px; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -38,7 +32,6 @@
 nav {
   width: 90%;
   height: 70px;
-  /* border: 1px solid; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -50,19 +43,15 @@ nav > ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* border: 1px solid red; */
   height: 100%;
   width: 35vw;
   margin-left: -50px;
-  /* border: 1px solid black; */
 }
 nav > ul > li {
   height: 100%;
   display: flex;
   align-items: center;
-  /* margin-left: 30px; */
   list-style: none;
-  /* border: 1px solid red; */
   padding-left: 10px;
   padding-right: 10px;
   font-weight: 400;
@@ -73,10 +62,8 @@ nav > ul > li > a {
   text-decoration: none;
   font-weight: 600;
 }
-input {
+#searchdiv > input {
   height: 100%;
-  /* padding-left: 300px; */
-  /* margin-left: 10px; */
   border: none;
   background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/1200px-Vector_search_icon.svg.png")
     no-repeat left;
@@ -88,8 +75,6 @@ input {
   width: 30vw;
   background-color: rgb(245, 245, 245);
   border-radius: 10px;
-  /* background-repeat: no-repeat; */
-  /* border: 1px solid red; */
 }
 
 input:focus {
@@ -100,22 +85,11 @@ input:focus {
   height: 45%;
   border-radius: 10px;
   width: 30vw;
-  /* padding-left: 8px; */
-  /* background-position-x: ; */
 }
 
-/* *:not(.slideshow-container) {
-  filter: blur(1px);
-} */
-
 .icon {
-  /* border: 1px solid; */
   padding: 0px 2px;
   position: relative;
-  /* display: flex; */
-  /* margin: auto; */
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 .icon p {
   font-size: 1.1vw;
@@ -137,7 +111,6 @@ input:focus {
   /* height: 300px; */
   /* opacity: 0; */
   visibility: hidden;
-  /* transition: 0.5s; */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #profiledropdown p,
@@ -151,9 +124,6 @@ li {
 }
 #profiledropdown p:nth-child(2) {
   margin-bottom: 15px;
-  /* color: red; */
-}
-#profiledropdown p:first-child {
 }
 #profile:hover {
   border-bottom: 5px solid red;
@@ -170,10 +140,7 @@ li {
   border: 1px solild red;
 }
 hr {
-  /* height: ; */
-  /* font-weight: 1px; */
   border: 0.1px solid rgb(230, 230, 230);
-  /* color: rgb(251, 251, 251); */
   margin-right: 15px;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -186,11 +153,7 @@ hr {
 }
 #profiledropdown li:hover {
   font-weight: 600;
-  /* color: red; */
 }
-/* #profile:hover{
-  visibility: ;
-} */
 #profiledropdown li:first-child {
   margin-bottom: 5px;
   border: 1px solid black;
@@ -208,12 +171,7 @@ hr {
 }
 
 .icon:hover #profiledropdown {
-  /* opacity: 1; */
   visibility: visible;
-  /* top: 133%; */
-}
-#profiledropdown > ul {
-  /* padding-left: 10px; */
 }
 #profiledropdown > ul > li {
   list-style: none;
@@ -221,9 +179,7 @@ hr {
 }
 #profiledropdown > ul > li > a {
   text-decoration: none;
-  /* color: red; */
 }
-/* megamenu */
 
 .megamenu {
   color: #282c3f;
@@ -231,31 +187,20 @@ hr {
   top: 100%;
   left: 0px;
   display: none;
-  /* opacity: 0; */
   visibility: hidden;
   z-index: 4;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   width: 90%;
-  /* height: 400px; */
-  /* box-shadow: rgba(51, 50, 50, 0.24) 0px 3px 8px; */
   display: flex;
-  /* justify-content: space-between; */
+  border: 1px solid rgb(223, 223, 223);
 }
 nav > ul > li:hover .megamenu {
-  /* transition: 1s; */
-  /* transition-delay: 0.5s; */
-  /* opacity: 1; */
   visibility: visible;
-  /* top: 123%; */
-  /* display: block; */
-  /* display: block; */
   display: flex;
 }
 
 .megaitems {
   flex-basis: 33%;
-  /* margin-right: 10px; */
-
   padding: 20px 30px;
 }
 .megaitems:nth-child(even) {
@@ -282,9 +227,7 @@ nav > ul > li:hover .megamenu {
   display: block;
   line-height: 25px;
   font-weight: 2vw;
-  /* color: red; */
 }
 .megaitems > ul > li:hover {
-  /* transition: 1s; */
   font-weight: 600;
 }

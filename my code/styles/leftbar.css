@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#leftBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  border: 1px solid red;
+  width: 15%;
+  line-height: 1.5rem;
+}
+svg {
+  width: 13px;
+}
+
+#section {
+  border: 1px solid black;
+  width: 82%;
+}
+#section > div {
+  /* border: 1px solid green; */
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+}
+#section span:first-child {
+  font-size: 22px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+}
+#bigContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#rightBar {
+  width: 80%;
+}

@@ -8,28 +8,36 @@ body {
   align-items: center;
   font-family: "Inter", sans-serif;
   border: 1px solid red;
-  width: 15%;
+  width: 15.5%;
   line-height: 1.5rem;
-}
-svg {
-  width: 13px;
+  gap: 20px;
 }
 
 #section {
   border: 1px solid black;
-  width: 82%;
+  width: 87%;
+  padding: 20px 0;
 }
 #section > div {
-  /* border: 1px solid green; */
-  padding: 5px 5px;
+  border: 1px solid green;
+  /* padding: 15px 0; */
+  /* padding: 10px; */
+  padding: 6px 5px;
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 #section span:first-child {
-  font-size: 22px;
-  border: 1px solid red;
+  /* font-size: 30px; */
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
+  margin-right: 10px;
+}
+svg {
+  height: 18px;
+  width: 18px;
+  /* font-size: 30px; */
 }
 #bigContainer {
   display: flex;
@@ -38,4 +46,16 @@ svg {
 
 #rightBar {
   width: 80%;
+}
+#mainLogo {
+  display: flex;
+  height: 50px;
+  border: 1px solid green;
+}
+#mainLogo img {
+  height: 100%;
+}
+
+#add_product > span:first-child {
+  font-size: 25px;
 }

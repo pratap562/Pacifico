@@ -1,5 +1,6 @@
 #data {
   width: 25%;
+ 
 }
 #images {
   display: grid;
@@ -8,6 +9,28 @@
   gap: 10px;
   width: 65%;
   padding: 20px;
+}
+
+#images>div:nth-child(3){
+    grid-area: 2/1/3/3;
+    padding: 16px;
+}
+#images>div:nth-child(3)>*{
+  margin: 10px;
+}
+#images>div:nth-child(3)>:nth-child(2),#images>div:nth-child(3)>:nth-child(5){
+font-weight: 700;
+}
+#images>div:nth-child(3)>:nth-child(3){
+  margin: 0 0 0 16px;
+  /* color: red; */
+}
+#images>div:nth-child(3)>:nth-child(4){
+  margin: 0 0 0 16px;
+  /* color: green; */
+}
+#images>div:nth-child(3)>:nth-child(1){
+font-size: 20px;
 }
 
 /* #images>div>img{
@@ -39,6 +62,14 @@ img {
   margin-right: 10px;
   width: 60px;
 }
+#small_images > *>img{
+  border: 1px solid  #969db1;
+  border-radius: 3px;
+}
+#small_images > *>img:hover{
+cursor: pointer;
+border: 1px solid #2d313b;
+}
 .MRP {
   color: #576582;
   font-weight: 100;
@@ -68,8 +99,12 @@ button:first-child {
   margin-bottom: 5px;
 }
 
+button:first-child:hover{
+  background-color: #309c33;
+}
+
 button:last-child {
-  /* background-color: #4CAF50; Green */
+  background-color: #e3e4ec;
   border: none;
   /* color: white; */
   padding: 15px 32px;
@@ -77,4 +112,24 @@ button:last-child {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+button:last-child:hover{
+  background-color: #cfd1df;
+}
+
+#size{
+  border-color: #969db1;
+}
+#size:hover{
+  border-color: #1c1e25;
+  
+}
+#cart,#wishlist,#size{
+  /* border: #ff905a; */
+  border-radius: 3px;
+  
+  }
+#cart:hover,#wishlist:hover,#size:hover{
+cursor: pointer;
+
 }

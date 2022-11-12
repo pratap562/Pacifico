@@ -104,6 +104,7 @@ function Click_unclick_2(el, i) {
   });
 }
 
+//.............DATA Fetching..........
 const fetching = async (value) => {
   let res = await fetch(
     `https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=${value}&pagesize=5&currentpage=1&`,
@@ -124,10 +125,10 @@ const fetching = async (value) => {
   localStorage.setItem("tempData", JSON.stringify(data.results));
   append(data.results);
 };
-// fetching("men_party");
+fetching("men_party");
 
-let tempo_data = JSON.parse(localStorage.getItem("tempData")) || [];
-append(tempo_data);
+// let tempo_data = JSON.parse(localStorage.getItem("tempData")) || [];
+// append(tempo_data);
 function append(Rdata) {
   //   let Pdata = [
   //     {
@@ -195,4 +196,4 @@ function append(Rdata) {
   });
 }
 
-// actual_price: this.MRP-((this.MRP/this.discount)*100)
+

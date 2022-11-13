@@ -1,6 +1,19 @@
 #data {
-  width: 25%;
- 
+  width: 30%;
+  margin-top: 20px;
+  position: fixed;
+  right: 2%;
+  /* margin-right: 5vw; */
+}
+#data > #bag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#data > #bag > #cart,
+#data > #bag > #wishlist {
+  width: 80%;
+  margin-bottom: 10px;
 }
 #images {
   display: grid;
@@ -9,28 +22,30 @@
   gap: 10px;
   width: 65%;
   padding: 20px;
+  margin-right: 30%;
 }
 
-#images>div:nth-child(3){
-    grid-area: 2/1/3/3;
-    padding: 16px;
+#images > div:nth-child(3) {
+  grid-area: 2/1/3/3;
+  padding: 16px;
 }
-#images>div:nth-child(3)>*{
+#images > div:nth-child(3) > * {
   margin: 10px;
 }
-#images>div:nth-child(3)>:nth-child(2),#images>div:nth-child(3)>:nth-child(5){
-font-weight: 700;
+#images > div:nth-child(3) > :nth-child(2),
+#images > div:nth-child(3) > :nth-child(5) {
+  font-weight: 700;
 }
-#images>div:nth-child(3)>:nth-child(3){
+#images > div:nth-child(3) > :nth-child(3) {
   margin: 0 0 0 16px;
   /* color: red; */
 }
-#images>div:nth-child(3)>:nth-child(4){
+#images > div:nth-child(3) > :nth-child(4) {
   margin: 0 0 0 16px;
   /* color: green; */
 }
-#images>div:nth-child(3)>:nth-child(1){
-font-size: 20px;
+#images > div:nth-child(3) > :nth-child(1) {
+  font-size: 20px;
 }
 
 /* #images>div>img{
@@ -50,7 +65,8 @@ img {
 
 #product_data {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 100px;
 }
 #small_images {
   width: 100%;
@@ -62,13 +78,13 @@ img {
   margin-right: 10px;
   width: 60px;
 }
-#small_images > *>img{
-  border: 1px solid  #969db1;
+#small_images > * > img {
+  border: 1px solid #969db1;
   border-radius: 3px;
 }
-#small_images > *>img:hover{
-cursor: pointer;
-border: 1px solid #2d313b;
+#small_images > * > img:hover {
+  cursor: pointer;
+  border: 1px solid #2d313b;
 }
 .MRP {
   color: #576582;
@@ -77,12 +93,12 @@ border: 1px solid #2d313b;
 .MRP + h3 {
   color: #ff905a;
 }
-#sizes,
+/* #sizes,
 #bag,
 select,
 button {
   width: 100%;
-}
+} */
 select {
   height: 50px;
   margin: 10px 0;
@@ -99,7 +115,7 @@ button:first-child {
   margin-bottom: 5px;
 }
 
-button:first-child:hover{
+button:first-child:hover {
   background-color: #309c33;
 }
 
@@ -113,23 +129,30 @@ button:last-child {
   display: inline-block;
   font-size: 16px;
 }
-button:last-child:hover{
+button:last-child:hover {
   background-color: #cfd1df;
 }
 
-#size{
+#size {
   border-color: #969db1;
+  width: 11%;
+  margin-left: 24vw;
 }
-#size:hover{
+#size:hover {
   border-color: #1c1e25;
-  
 }
-#cart,#wishlist,#size{
+#cart,
+#wishlist,
+#size {
   /* border: #ff905a; */
   border-radius: 3px;
-  
-  }
-#cart:hover,#wishlist:hover,#size:hover{
-cursor: pointer;
+}
+#cart:hover,
+#wishlist:hover,
+#size:hover {
+  cursor: pointer;
+}
 
+#data > #p_detail {
+  margin-left: 8%;
 }

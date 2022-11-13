@@ -74,7 +74,7 @@ let navbar = () => {
           >
         </div>
         <div class="icon">
-          <a href="">
+          <a href="./cart.html">
           <i class="fa-solid fa-bag-shopping"></i>
             <p>bag</p>
           </a>

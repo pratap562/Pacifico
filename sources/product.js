@@ -156,19 +156,25 @@ function Append(info) {
 }
 
 const addWishData = async () => {
+  // loader should start
+  document.getElementById('loder').classList = 'loder'
+  document.getElementById('spin').classList = 'spin'
+
 
   let customerData = JSON.parse(localStorage.getItem("userDetail")) || []
   let productData = JSON.parse(localStorage.getItem("product_detail")) || []
   let imageData = JSON.parse(localStorage.getItem("pro_images")) || []
   let priceData = JSON.parse(localStorage.getItem("prices")) || []
+  let brand = JSON.parse(localStorage.getItem("brand"))
 
   let send_data = {
     customer_Id: customerData.token,
-    product_Name: productData.name,
     image_url: imageData[0].url,
-    discounted_price: `0 ${priceData[0]}`,
-    actual_price: `0 ${priceData[1]}`,
-    discount: `${priceData[2]}`
+    price: `0 ${priceData[0]}`,
+    strikedoffprice: `0 ${priceData[1]}`,
+    brand: brand,
+    offer: `${priceData[2]}`,
+    para: productData.name
   }
 
   if (customerData.token === undefined) {
@@ -182,27 +188,36 @@ const addWishData = async () => {
       }
     })
   }
+  document.getElementById('loder').classList.remove('loder')
+  document.getElementById('spin').classList.remove('spin')
 
 }
 
 const addCartData = async () => {
+
+  // loader should start
+  document.getElementById('loder').classList = 'loder'
+  document.getElementById('spin').classList = 'spin'
   let customerData = JSON.parse(localStorage.getItem("userDetail")) || []
   let productData = JSON.parse(localStorage.getItem("product_detail")) || []
   let imageData = JSON.parse(localStorage.getItem("pro_images")) || []
   let priceData = JSON.parse(localStorage.getItem("prices")) || []
+  let brand = JSON.parse(localStorage.getItem("brand"))
 
   let send_data = {
     customer_Id: customerData.token,
-    product_Name: productData.name,
     image_url: imageData[0].url,
-    discounted_price: `0 ${priceData[0]}`,
-    actual_price: `0 ${priceData[1]}`,
-    discount: `${priceData[2]}`
+    price: `0 ${priceData[0]}`,
+    strikedoffprice: `0 ${priceData[1]}`,
+    brand: brand,
+    offer: `${priceData[2]}`,
+    para: productData.name
   }
 
   if (customerData.token === undefined) {
     window.location.href = "signup.html"
-  } else {
+  }
+  else {
     let res = await fetch(`http://localhost:3000/Cart`, {
       method: "POST",
       body: JSON.stringify(send_data),
@@ -211,4 +226,6 @@ const addCartData = async () => {
       }
     })
   }
+  document.getElementById('loder').classList.remove('loder')
+  document.getElementById('spin').classList.remove('spin')
 }

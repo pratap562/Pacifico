@@ -3,181 +3,192 @@ document.querySelector('*').style.visibility = 'hidden'
 document.getElementById('loder').style.visibility = 'visible'
 document.getElementById('loder').classList = 'loder'
 document.getElementById('spin').classList = 'spin'
-let People_type = ["Men", "Women", "Boys", "Girls"];
-People_type.forEach((el, i) => {
-  let prnt = document.getElementById("people_type");
-  let person = document.createElement("div");
-  person.addEventListener("click", (el1) => {
-    Click_unclick_0(el1, i);
-    // console.log(el.target.parentElement.childNodes[0].checked);
+
+const doFilter = () => {
+  let People_type = ["Men", "Women", "Boys", "Girls"];
+  People_type.forEach((el, i) => {
+    let prnt = document.getElementById("people_type");
+    let person = document.createElement("div");
+    person.addEventListener("click", (el1) => {
+      Click_unclick_0(el1, i);
+      // console.log(el.target.parentElement.childNodes[0].checked);
+    });
+
+    let input = document.createElement("input");
+    input.type = "radio";
+    input.id = `pType${i}`;
+    let label = document.createElement('label')
+    let span = document.createElement('span')
+    label.classList = 'container'
+    span.classList = 'checkmark'
+    let pType = document.createElement("span");
+    pType.textContent = el;
+
+    label.append(input, span, pType)
+
+
+    person.append(label);
+    prnt.append(person);
   });
 
-  let input = document.createElement("input");
-  input.type = "radio";
-  input.id = `pType${i}`;
-  let label = document.createElement('label')
-  let span = document.createElement('span')
-  label.classList = 'container'
-  span.classList = 'checkmark'
-  let pType = document.createElement("span");
-  pType.textContent = el;
-
-  label.append(input, span, pType)
 
 
-  person.append(label);
-  prnt.append(person);
-});
+  let price_filter = ["500-2000", "2000-6000", "6000-10000"]
+  price_filter.forEach((el, i) => {
+    let prnt = document.getElementById("price");
+    let person = document.createElement("div");
+    person.addEventListener("click", (el1) => {
+      Click_unclick_001(el1, i);
+      // console.log(el.target.parentElement.childNodes[0].checked);
+    });
+
+    let input = document.createElement("input");
+    input.type = "radio";
+    input.id = `prcType${i}`;
+    let label = document.createElement('label')
+    let span = document.createElement('span')
+    label.classList = 'container'
+    span.classList = 'checkmark'
+    let pType = document.createElement("span");
+    pType.textContent = el;
+
+    label.append(input, span, pType)
 
 
-
-let price_filter = ["500-2000", "2000-6000", "6000-10000"]
-price_filter.forEach((el, i) => {
-  let prnt = document.getElementById("price");
-  let person = document.createElement("div");
-  person.addEventListener("click", (el1) => {
-    Click_unclick_001(el1, i);
-    // console.log(el.target.parentElement.childNodes[0].checked);
+    person.append(label);
+    prnt.append(person);
   });
 
-  let input = document.createElement("input");
-  input.type = "radio";
-  input.id = `prcType${i}`;
-  let label = document.createElement('label')
-  let span = document.createElement('span')
-  label.classList = 'container'
-  span.classList = 'checkmark'
-  let pType = document.createElement("span");
-  pType.textContent = el;
 
-  label.append(input, span, pType)
-
-
-  person.append(label);
-  prnt.append(person);
-});
-
-
-function Click_unclick_0(el, i) {
-  console.log(el, i);
-  el.target.parentElement.childNodes[0].checked = true;
-  People_type.forEach((el2, ind) => {
-    if (ind != i) {
-      document.getElementById(`pType${ind}`).checked = false;
-    }
-  });
-}
-
-
-function Click_unclick_001(el, i) {
-  console.log(el, i);
-  el.target.parentElement.childNodes[0].checked = true;
-  People_type.forEach((el2, ind) => {
-    if (ind != i) {
-      document.getElementById(`prcType${ind}`).checked = false;
-    }
-  });
-}
-
-let concepts = [
-  { code: "BASICS", count: 10 },
-  { code: "H&M MAN", count: 23 },
-  { code: "H&M Move", count: 1 },
-  { code: "MODERN CLASSIC", count: 50 },
-];
-concepts = concepts.sort((a, b) => b.count - a.count);
-concepts.forEach((el, i) => {
-  let prnt = document.getElementById("brand");
-  let brd = document.createElement("div");
-  brd.addEventListener("click", (el1) => {
-    Click_unclick_1(el1, i);
-    // console.log(el.target.parentElement.childNodes[0].checked);
-  });
-  let input = document.createElement("input");
-  input.type = "checkbox";
-  input.id = `brand${i}`;
-  let brdName = document.createElement("span");
-  brdName.textContent = el.code;
-  let brdCount = document.createElement("span");
-  brdCount.textContent = ` (${el.count})`;
-
-  let label = document.createElement('label')
-  let span = document.createElement('span')
-  label.classList = 'container'
-  span.classList = 'checkmark'
-
-  label.append(input, brdName, brdCount, span)
-
-  brd.append(label);
-  prnt.append(brd);
-});
-function Click_unclick_1(el, i) {
-  // console.log(el,i);
-  // el.target.parentElement.childNodes[0].checked = false;
-  let checkBox = el.target.parentElement.childNodes[0]
-  if (checkBox.checked) {
-    checkBox.checked = false
-  } else {
-    checkBox.checked = true
+  function Click_unclick_0(el, i) {
+    console.log(el, i);
+    el.target.parentElement.childNodes[0].checked = true;
+    People_type.forEach((el2, ind) => {
+      if (ind != i) {
+        document.getElementById(`pType${ind}`).checked = false;
+      }
+    });
   }
-}
-
-let colorWithNames = [
-  { code: "red", count: 28 },
-  { code: "yellow", count: 38 },
-  { code: "green", count: 18 },
-  { code: "pink", count: 15 },
-  { code: "blue", count: 20 },
-  { code: "green", count: 38 },
-  { code: "white", count: 8 },
-  { code: "purple", count: 23 },
-  { code: "green", count: 18 },
-  { code: "turquoise", count: 25 },
-  { code: "orange", count: 10 },
-];
-colorWithNames = colorWithNames.sort((a, b) => b.count - a.count);
-colorWithNames.forEach((el, i) => {
-  let prnt = document.getElementById("colors");
-  let clr = document.createElement("div");
-  clr.addEventListener("click", (el1) => {
-    Click_unclick_2(el1, i);
-    // console.log(el.target.parentElement.childNodes[0].checked);
-  });
-  let input = document.createElement("input");
-  input.type = "checkbox";
-  input.id = `color${i}`;
-  input.style.accentColor = el.code;
-  let clrName = document.createElement("span");
-  clrName.textContent = el.code;
-  let clrCount = document.createElement("span");
-  clrCount.textContent = ` (${el.count}) `;
 
 
-  let label = document.createElement('label')
-  let span = document.createElement('span')
-  label.classList = 'container'
-  span.classList = 'checkmark'
-
-  label.append(input, clrName, clrCount, span)
-
-  clr.append(label);
-  prnt.append(clr);
-});
-
-function Click_unclick_2(el, i) {
-  console.log(el, i);
-
-  console.log('hellodsdasf')
-  let checkBox = el.target.parentElement.childNodes[0]
-  // checkBox.checked = true
-  if (checkBox.checked) {
-    checkBox.checked = false
-    console.log('hello')
-  } else {
-    checkBox.checked = true
-    console.log('by')
+  function Click_unclick_001(el, i) {
+    console.log(el, i);
+    el.target.parentElement.childNodes[0].checked = true;
+    People_type.forEach((el2, ind) => {
+      if (ind != i) {
+        document.getElementById(`prcType${ind}`).checked = false;
+      }
+    });
   }
+
+  let concepts = [
+    { code: "BASICS", count: 10 },
+    { code: "H&M MAN", count: 23 },
+    { code: "H&M Move", count: 1 },
+    { code: "MODERN CLASSIC", count: 50 },
+  ];
+  concepts = concepts.sort((a, b) => b.count - a.count);
+  concepts.forEach((el, i) => {
+    let prnt = document.getElementById("brand");
+    let brd = document.createElement("div");
+    brd.addEventListener("click", (el1) => {
+      Click_unclick_1(el1, i);
+      // console.log(el.target.parentElement.childNodes[0].checked);
+    });
+    let input = document.createElement("input");
+    input.type = "checkbox";
+    input.id = `brand${i}`;
+    let brdName = document.createElement("span");
+    brdName.textContent = el.code;
+    let brdCount = document.createElement("span");
+    brdCount.textContent = ` (${el.count})`;
+
+    let label = document.createElement('label')
+    let span = document.createElement('span')
+    label.classList = 'container'
+    span.classList = 'checkmark'
+
+    label.append(input, brdName, brdCount, span)
+
+    brd.append(label);
+    prnt.append(brd);
+  });
+  function Click_unclick_1(el, i) {
+    // console.log(el,i);
+    // el.target.parentElement.childNodes[0].checked = false;
+    let checkBox = el.target.parentElement.childNodes[0]
+    if (checkBox.checked) {
+      checkBox.checked = false
+    } else {
+      checkBox.checked = true
+    }
+  }
+
+  let colorWithNames = [
+    { code: 'red_ff45vn', count: 28 },
+    { code: 'yellow_ff45vn', count: 38 },
+    { code: 'green_ff45vn', count: 18 },
+    { code: 'pink_ff45vn', count: 15 },
+    { code: 'blue_ff45vn', count: 20 },
+    { code: 'green_ff45vn', count: 38 },
+    { code: 'white_ff45vn', count: 8 },
+    { code: 'purple_ff45vn', count: 23 },
+    { code: 'green_ff45vn', count: 18 },
+    { code: 'turquoise_ff45vn', count: 25 },
+    { code: 'orange_ff45vn', count: 10 },
+  ];
+  colorWithNames = colorWithNames.sort((a, b) => b.count - a.count);
+  colorWithNames.forEach((el, i) => {
+
+    let realCode = el.code.split('_')[0]
+    let prnt = document.getElementById("colors");
+    let clr = document.createElement("div");
+    clr.addEventListener("click", (el1) => {
+      Click_unclick_2(el1, i);
+      // console.log(el.target.parentElement.childNodes[0].checked);
+    });
+    let input = document.createElement("input");
+    input.type = "checkbox";
+    input.id = `color${i}`;
+    input.style.accentColor = realCode;
+    let clrName = document.createElement("span");
+    clrName.textContent = realCode;
+    let clrCount = document.createElement("span");
+    clrCount.textContent = ` (${el.count}) `;
+
+
+    let label = document.createElement('label')
+    let span = document.createElement('span')
+    label.classList = 'container'
+    span.classList = 'checkmark'
+
+    let circle = document.createElement('span')
+    // circle.style.display = 'inlineBlock'
+    circle.classList = 'circle'
+    circle.style.backgroundColor = realCode
+    label.append(input, circle, clrName, clrCount, span)
+
+    clr.append(label);
+    prnt.append(clr);
+  });
+
+  function Click_unclick_2(el, i) {
+    console.log(el, i);
+
+    console.log('hellodsdasf')
+    let checkBox = el.target.parentElement.childNodes[0]
+    // checkBox.checked = true
+    if (checkBox.checked) {
+      checkBox.checked = false
+      console.log('hello')
+    } else {
+      checkBox.checked = true
+      console.log('by')
+    }
+  }
+
 }
+
 
 console.log('sahi aj jaj')
 //.............DATA Fetching..........
@@ -198,8 +209,9 @@ const fetching = async (value) => {
   );
 
   let data = await res.json();
-  console.log(data.results);
+  console.log(data);
   localStorage.setItem("tempData", JSON.stringify(data.results));
+  doFilter(data)
   append(data.results);
   document.querySelector('body').style.visibility = 'visible'
   document.getElementById('loder').classList.remove('loder')
@@ -248,6 +260,7 @@ function append(Rdata) {
       localStorage.setItem("pro_images", JSON.stringify(el.galleryImages));
       let prices = [Math.floor(mrp - mrp / discnt), mrp, discnt];
       localStorage.setItem("prices", JSON.stringify(prices));
+      localStorage.setItem("brand", JSON.stringify(el.brandName))
 
       window.location.href = "product.html";
     });

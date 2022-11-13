@@ -145,42 +145,26 @@
   ],
   "Whishlist": [
     {
-      "customer_Id": "1539e07f0d6dbb2cc4269691d30be522",
-      "product_Name": "Essentials No 8: THE CREWNECK",
-      "image_url": "https://lp2.hm.com/hmgoepprod?set=source[/9a/6a/9a6a3f865c728f6346136801d374403ab1c93b3c.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-      "discounted_price": "0 2666",
-      "actual_price": "0 2833",
-      "discount": "17%",
+      "customer_Id": "c9b60e08d73496404a545ba51dc4ff00",
+      "image_url": "https://lp2.hm.com/hmgoepprod?set=source[/18/d6/18d6d787bdd756820f08de38684bbcad3786a38b.jpg],origin[dam],category[men_jeans_skinny],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+      "price": "0 2988",
+      "strikedoffprice": "0 3237",
+      "brand": "H&M",
+      "offer": "13",
+      "para": "Skinny Jeans",
       "id": 1
-    },
-    {
-      "customer_Id": "78760818340c4091373e7c3275aa44c4",
-      "product_Name": "Relaxed Fit Corduroy Shirt",
-      "image_url": "https://lp2.hm.com/hmgoepprod?set=source[/6b/7d/6b7dd318b3782c565cb4b855c7d009e5cd002ef6.jpg],origin[dam],category[men_shirts_longsleeved],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-      "discounted_price": "0 2293",
-      "actual_price": "0 2428",
-      "discount": "18",
-      "id": 2
     }
   ],
   "Cart": [
     {
-      "customer_Id": "1539e07f0d6dbb2cc4269691d30be522",
-      "product_Name": "Essentials No 4: THE OXFORD SHIRT",
-      "image_url": "https://lp2.hm.com/hmgoepprod?set=source[/f3/56/f3563d361c5b54ac35b34755a96c202fc15c6a3f.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-      "discounted_price": "0 2615",
-      "actual_price": "0 2833",
-      "discount": "13%",
+      "customer_Id": "c9b60e08d73496404a545ba51dc4ff00",
+      "image_url": "https://lp2.hm.com/hmgoepprod?set=source[/18/d6/18d6d787bdd756820f08de38684bbcad3786a38b.jpg],origin[dam],category[men_jeans_skinny],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+      "price": "0 2988",
+      "strikedoffprice": "0 3237",
+      "brand": "H&M",
+      "offer": "13",
+      "para": "Skinny Jeans",
       "id": 1
-    },
-    {
-      "customer_Id": "1539e07f0d6dbb2cc4269691d30be522",
-      "product_Name": "Essentials No 8: THE CREWNECK",
-      "image_url": "https://lp2.hm.com/hmgoepprod?set=source[/9a/6a/9a6a3f865c728f6346136801d374403ab1c93b3c.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
-      "discounted_price": "0 2666",
-      "actual_price": "0 2833",
-      "discount": "17",
-      "id": 2
     }
   ]
 }

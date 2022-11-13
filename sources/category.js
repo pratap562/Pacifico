@@ -4,6 +4,23 @@ document.getElementById('loder').style.visibility = 'visible'
 document.getElementById('loder').classList = 'loder'
 document.getElementById('spin').classList = 'spin'
 
+
+const setPostions = () => {
+  console.log('hello brothers')
+  let filter = document.getElementById('all_filters')
+  let mainDiv = document.getElementById('data')
+  filter.onmouseenter = () => {
+    filter.style.position = 'static'
+    // mainDiv.style.margin = '0px'
+    mainDiv.style.position = 'fixed'
+  }
+
+  filter.onmouseleave = () => {
+    filter.style.position = 'fixed',
+      mainDiv.style.position = 'static'
+  }
+}
+
 const doFilter = () => {
   let People_type = ["Men", "Women", "Boys", "Girls"];
   People_type.forEach((el, i) => {
@@ -216,6 +233,9 @@ const fetching = async (value) => {
   document.querySelector('body').style.visibility = 'visible'
   document.getElementById('loder').classList.remove('loder')
   document.getElementById('spin').classList.remove('spin')
+
+
+  setPostions()
 
 };
 // let tempo_data = JSON.parse(localStorage.getItem("tempData")) || [];

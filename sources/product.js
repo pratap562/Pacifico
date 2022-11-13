@@ -1,3 +1,8 @@
+document.querySelector('*').style.visibility = 'hidden'
+document.getElementById('loder').style.visibility = 'visible'
+document.getElementById('loder').classList = 'loder'
+document.getElementById('spin').classList = 'spin'
+
 let key = JSON.parse(localStorage.getItem("pro_key"));
 let p_images = JSON.parse(localStorage.getItem("pro_images"));
 
@@ -20,6 +25,9 @@ const detail = async (value) => {
   let data = await res.json();
   console.log(data.product);
   localStorage.setItem("product_detail", JSON.stringify(data.product));
+  document.querySelector('body').style.visibility = 'visible'
+  document.getElementById('loder').classList.remove('loder')
+  document.getElementById('spin').classList.remove('spin')
   Append(data.product);
 };
 detail(key);
@@ -133,16 +141,16 @@ function Append(info) {
   cart.addEventListener("click", () => {
     let size = document.getElementById("size").value;
     console.log(size);
-    pro_prices[3]=size
-    console.log("added to cart",pro_prices);
-    localStorage.setItem('p_details',JSON.stringify(pro_prices))
+    pro_prices[3] = size
+    console.log("added to cart", pro_prices);
+    localStorage.setItem('p_details', JSON.stringify(pro_prices))
 
     addCartData()
   });
   let wishlist = document.getElementById("wishlist");
   wishlist.addEventListener("click", () => {
     console.log("added to wishlist");
-    
+
     addWishData()
   });
 }
@@ -154,27 +162,27 @@ const addWishData = async () => {
   let imageData = JSON.parse(localStorage.getItem("pro_images")) || []
   let priceData = JSON.parse(localStorage.getItem("prices")) || []
 
-    let send_data = {
-      customer_Id : customerData.token,
-      product_Name : productData.name,
-      image_url : imageData[0].url,
-      discounted_price : `0 ${priceData[0]}`,
-      actual_price : `0 ${priceData[1]}`,
-      discount : `${priceData[2]}`
-    }
+  let send_data = {
+    customer_Id: customerData.token,
+    product_Name: productData.name,
+    image_url: imageData[0].url,
+    discounted_price: `0 ${priceData[0]}`,
+    actual_price: `0 ${priceData[1]}`,
+    discount: `${priceData[2]}`
+  }
 
-    if(customerData.token === undefined){
-      window.location.href = "signup.html"
-    }else{
-      let res = await fetch(`http://localhost:3000/Whishlist`,{
-        method:"POST",
-        body:JSON.stringify(send_data),
-        headers:{
-          "Content-Type":"application/json"
-        }
-      })
-    }
-  
+  if (customerData.token === undefined) {
+    window.location.href = "signup.html"
+  } else {
+    let res = await fetch(`http://localhost:3000/Whishlist`, {
+      method: "POST",
+      body: JSON.stringify(send_data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+  }
+
 }
 
 const addCartData = async () => {
@@ -183,24 +191,24 @@ const addCartData = async () => {
   let imageData = JSON.parse(localStorage.getItem("pro_images")) || []
   let priceData = JSON.parse(localStorage.getItem("prices")) || []
 
-    let send_data = {
-      customer_Id : customerData.token,
-      product_Name : productData.name,
-      image_url : imageData[0].url,
-      discounted_price : `0 ${priceData[0]}`,
-      actual_price : `0 ${priceData[1]}`,
-      discount : `${priceData[2]}`
-    }
+  let send_data = {
+    customer_Id: customerData.token,
+    product_Name: productData.name,
+    image_url: imageData[0].url,
+    discounted_price: `0 ${priceData[0]}`,
+    actual_price: `0 ${priceData[1]}`,
+    discount: `${priceData[2]}`
+  }
 
-    if(customerData.token === undefined){
-      window.location.href = "signup.html"
-    }else{
-      let res = await fetch(`http://localhost:3000/Cart`,{
-        method:"POST",
-        body:JSON.stringify(send_data),
-        headers:{
-          "Content-Type":"application/json"
-        }
-      })
-    }
+  if (customerData.token === undefined) {
+    window.location.href = "signup.html"
+  } else {
+    let res = await fetch(`http://localhost:3000/Cart`, {
+      method: "POST",
+      body: JSON.stringify(send_data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+  }
 }

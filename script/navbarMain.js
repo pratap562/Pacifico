@@ -1,6 +1,11 @@
 import navbar from "../COMPONENT/navbar.js";
 
 document.querySelector('#header').innerHTML = navbar()
+
+//adding loader
+// don't add loader to navbar it will create problem with others page loader it will make class delete very fast
+// document.getElementById('loder').classList = 'loder'
+// document.getElementById('spin').classList = 'spin'
 const menFstDiv = [
     { name: "New Arrivals", value: null },
     { name: "View All", value: "new-arrivals" },
@@ -74,12 +79,20 @@ const manAllData = [
 
 console.log(manAllData);
 window.onload = () => {
+    console.log('onload function working')
+    // removing loader
+    // document.getElementById('loder').classList.remove('loder')
+    // document.getElementById('spin').classList.remove('spin')
     ifLogin()
     // when we hover then show
     document.querySelectorAll('nav > ul > li').forEach((el, i) => {
         el.onmouseenter = () => {
-            document.querySelector('.slideshow-container').style.filter = 'blur(3px)'
-            document.querySelector('#prod-container').style.filter = 'blur(3px)'
+            if (document.querySelector('.slideshow-container') && document.querySelector('#prod-container')) {
+                document.querySelector('.slideshow-container').style.filter = 'blur(3px)'
+                document.querySelector('#prod-container').style.filter = 'blur(3px)'
+            } else {
+                document.getElementById('Products_data').style.filter = 'blur(3px)'
+            }
             // document.querySelector('.slideshow-container').style.filter = 'blur(3px)'
             // document.querySelector('#prod-container').style.backgroundColor = '#1E1E1E'
             // document.querySelector('body').style.filter = 'blur(0px)'
@@ -140,8 +153,13 @@ window.onload = () => {
 
     document.querySelectorAll('nav > ul > li').forEach((el) => {
         el.onmouseleave = () => {
-            document.querySelector('.slideshow-container').style.filter = 'blur(0px)'
-            document.querySelector('#prod-container').style.filter = 'blur(0px)'
+            if (document.querySelector('.slideshow-container') && document.querySelector('#prod-container')) {
+                document.querySelector('.slideshow-container').style.filter = 'blur(0px)'
+                document.querySelector('#prod-container').style.filter = 'blur(0px)'
+
+            } else {
+                document.getElementById('Products_data').style.filter = 'blur(0px)'
+            }
             el.style.borderBottom = null
             // document.querySelector('.megamenu').style.visibility = 'hidden'
             // document.querySelector('.megamenu').style.display = 'none'

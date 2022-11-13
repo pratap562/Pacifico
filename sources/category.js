@@ -1,3 +1,8 @@
+console.log('sahi hai abhi tak')
+document.querySelector('*').style.visibility = 'hidden'
+document.getElementById('loder').style.visibility = 'visible'
+document.getElementById('loder').classList = 'loder'
+document.getElementById('spin').classList = 'spin'
 let People_type = ["Men", "Women", "Boys", "Girls"];
 People_type.forEach((el, i) => {
   let prnt = document.getElementById("people_type");
@@ -6,21 +11,70 @@ People_type.forEach((el, i) => {
     Click_unclick_0(el1, i);
     // console.log(el.target.parentElement.childNodes[0].checked);
   });
+
   let input = document.createElement("input");
   input.type = "radio";
   input.id = `pType${i}`;
+  let label = document.createElement('label')
+  let span = document.createElement('span')
+  label.classList = 'container'
+  span.classList = 'checkmark'
   let pType = document.createElement("span");
   pType.textContent = el;
 
-  person.append(input, pType);
+  label.append(input, span, pType)
+
+
+  person.append(label);
   prnt.append(person);
 });
+
+
+
+let price_filter = ["500-2000", "2000-6000", "6000-10000"]
+price_filter.forEach((el, i) => {
+  let prnt = document.getElementById("price");
+  let person = document.createElement("div");
+  person.addEventListener("click", (el1) => {
+    Click_unclick_001(el1, i);
+    // console.log(el.target.parentElement.childNodes[0].checked);
+  });
+
+  let input = document.createElement("input");
+  input.type = "radio";
+  input.id = `prcType${i}`;
+  let label = document.createElement('label')
+  let span = document.createElement('span')
+  label.classList = 'container'
+  span.classList = 'checkmark'
+  let pType = document.createElement("span");
+  pType.textContent = el;
+
+  label.append(input, span, pType)
+
+
+  person.append(label);
+  prnt.append(person);
+});
+
+
 function Click_unclick_0(el, i) {
-  // console.log(el,i);
+  console.log(el, i);
   el.target.parentElement.childNodes[0].checked = true;
   People_type.forEach((el2, ind) => {
     if (ind != i) {
       document.getElementById(`pType${ind}`).checked = false;
+    }
+  });
+}
+
+
+function Click_unclick_001(el, i) {
+  console.log(el, i);
+  el.target.parentElement.childNodes[0].checked = true;
+  People_type.forEach((el2, ind) => {
+    if (ind != i) {
+      document.getElementById(`prcType${ind}`).checked = false;
     }
   });
 }
@@ -40,24 +94,32 @@ concepts.forEach((el, i) => {
     // console.log(el.target.parentElement.childNodes[0].checked);
   });
   let input = document.createElement("input");
-  input.type = "radio";
+  input.type = "checkbox";
   input.id = `brand${i}`;
   let brdName = document.createElement("span");
   brdName.textContent = el.code;
   let brdCount = document.createElement("span");
   brdCount.textContent = ` (${el.count})`;
 
-  brd.append(input, brdName, brdCount);
+  let label = document.createElement('label')
+  let span = document.createElement('span')
+  label.classList = 'container'
+  span.classList = 'checkmark'
+
+  label.append(input, brdName, brdCount, span)
+
+  brd.append(label);
   prnt.append(brd);
 });
 function Click_unclick_1(el, i) {
   // console.log(el,i);
-  el.target.parentElement.childNodes[0].checked = true;
-  concepts.forEach((el2, ind) => {
-    if (ind != i) {
-      document.getElementById(`brand${ind}`).checked = false;
-    }
-  });
+  // el.target.parentElement.childNodes[0].checked = false;
+  let checkBox = el.target.parentElement.childNodes[0]
+  if (checkBox.checked) {
+    checkBox.checked = false
+  } else {
+    checkBox.checked = true
+  }
 }
 
 let colorWithNames = [
@@ -82,30 +144,45 @@ colorWithNames.forEach((el, i) => {
     // console.log(el.target.parentElement.childNodes[0].checked);
   });
   let input = document.createElement("input");
-  input.type = "radio";
+  input.type = "checkbox";
   input.id = `color${i}`;
   input.style.accentColor = el.code;
   let clrName = document.createElement("span");
   clrName.textContent = el.code;
   let clrCount = document.createElement("span");
   clrCount.textContent = ` (${el.count}) `;
-  clr.append(input, clrName, clrCount);
+
+
+  let label = document.createElement('label')
+  let span = document.createElement('span')
+  label.classList = 'container'
+  span.classList = 'checkmark'
+
+  label.append(input, clrName, clrCount, span)
+
+  clr.append(label);
   prnt.append(clr);
 });
 
 function Click_unclick_2(el, i) {
-  // console.log(el,i);
+  console.log(el, i);
 
-  el.target.parentElement.childNodes[0].checked = true;
-  colorWithNames.forEach((el2, ind) => {
-    if (ind != i) {
-      document.getElementById(`color${ind}`).checked = false;
-    }
-  });
+  console.log('hellodsdasf')
+  let checkBox = el.target.parentElement.childNodes[0]
+  // checkBox.checked = true
+  if (checkBox.checked) {
+    checkBox.checked = false
+    console.log('hello')
+  } else {
+    checkBox.checked = true
+    console.log('by')
+  }
 }
 
+console.log('sahi aj jaj')
 //.............DATA Fetching..........
 const fetching = async (value) => {
+
   let res = await fetch(
     `https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=${value}&pagesize=5&currentpage=1&`,
     {
@@ -124,9 +201,11 @@ const fetching = async (value) => {
   console.log(data.results);
   localStorage.setItem("tempData", JSON.stringify(data.results));
   append(data.results);
-};
-fetching("men_party");
+  document.querySelector('body').style.visibility = 'visible'
+  document.getElementById('loder').classList.remove('loder')
+  document.getElementById('spin').classList.remove('spin')
 
+};
 // let tempo_data = JSON.parse(localStorage.getItem("tempData")) || [];
 // append(tempo_data);
 function append(Rdata) {
@@ -197,3 +276,7 @@ function append(Rdata) {
 }
 
 
+console.log('helflo')
+let fetchCategory = localStorage.getItem('category')
+console.log('hello')
+fetching(fetchCategory);

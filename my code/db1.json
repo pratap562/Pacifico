@@ -152,6 +152,15 @@
       "actual_price": "0 2833",
       "discount": "17%",
       "id": 1
+    },
+    {
+      "customer_Id": "78760818340c4091373e7c3275aa44c4",
+      "product_Name": "Relaxed Fit Corduroy Shirt",
+      "image_url": "https://lp2.hm.com/hmgoepprod?set=source[/6b/7d/6b7dd318b3782c565cb4b855c7d009e5cd002ef6.jpg],origin[dam],category[men_shirts_longsleeved],type[DESCRIPTIVESTILLLIFE],res[m],hmver[2]&call=url[file:/product/style]",
+      "discounted_price": "0 2293",
+      "actual_price": "0 2428",
+      "discount": "18",
+      "id": 2
     }
   ],
   "Cart": [

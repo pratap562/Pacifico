@@ -138,3 +138,8 @@ input[type*="radio"] {
 span {
   font-size: 13px;
 }
+
+.circle {
+  width: 10px;
+  height: 10px;
+}

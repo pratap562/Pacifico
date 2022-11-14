@@ -44,8 +44,8 @@ nav > ul {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  width: 35vw;
-  margin-left: -50px;
+  width: 37vw;
+  margin-left: -17px;
 }
 nav > ul > li {
   height: 100%;
@@ -68,11 +68,11 @@ nav > ul > li > a {
   background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/1200px-Vector_search_icon.svg.png")
     no-repeat left;
   background-size: 12px;
-  padding-left: 40px;
+  padding-left: 44px;
   width: 200px;
   background-position: 17px 15px;
   border: none;
-  width: 30vw;
+  width: 33vw;
   background-color: rgb(245, 245, 245);
   border-radius: 10px;
 }
@@ -84,7 +84,7 @@ input:focus {
   border: 1px solid rgb(216, 214, 214);
   height: 45%;
   border-radius: 10px;
-  width: 30vw;
+  width: 33vw;
 }
 
 .icon {

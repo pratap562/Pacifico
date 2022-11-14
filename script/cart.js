@@ -155,31 +155,34 @@ const append = (cartarr) => {
 
   }
 
-  document.querySelector(".makeorder").addEventListener("click", profile);
 
-  function profile() {
-    window.location.href = "../payment.html";
+
+
+  // console.log( amount, discount)
+}
+document.querySelector(".makeorder").addEventListener("click", profile);
+document.querySelector(".apply").addEventListener("click", discountfun);
+function profile() {
+  window.location.href = "../payment.html";
+}
+
+function discountfun() {
+  var payable_amount = +localStorage.getItem("amount");
+  var int_promo = document.querySelector("#promo").value;
+  var discount = +JSON.parse(localStorage.getItem('discount'))
+
+  if (payable_amount > 500 && int_promo == "MASAI500") {
+    let amount = payable_amount - 500;
+    discount = discount + 300;
+    localStorage.setItem("amount", amount)
+    localStorage.setItem("discount", discount);
+    document.querySelector(".amount_pay").innerText = amount;
+    document.querySelector(".filldiscount").innerText = "- " + discount;
+
+    document.querySelector(".apply").removeEventListener("click", discountfun);
+  } else {
+    console.log('nahi');
   }
-
-  document.querySelector(".apply").addEventListener("click", discountfun);
-
-  function discountfun() {
-    var payable_amount = +localStorage.getItem("amount");
-    var int_promo = document.querySelector("#promo").value;
-
-    if (payable_amount > 300 && int_promo == "MYNTRA300") {
-      amount = amount - 300;
-      discount = discount + 300;
-      localStorage.setItem("amount", amount);
-      localStorage.setItem("discount", discount);
-      document.querySelector(".amount_pay").innerText = amount;
-      document.querySelector(".filldiscount").innerText = "- " + discount;
-
-      document.querySelector(".apply").removeEventListener("click", discountfun);
-    }
-    // console.log( amount, discount)
-  }
-
   document.getElementById("landingPage").addEventListener("click", function () {
     window.location.href = "../Landingpage/index.html";
   });

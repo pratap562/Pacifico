@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/admin.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/admin.css" />
     <title>admin-panel</title>
-</head>
-<!-- <style>
+  </head>
+  <!-- <style>
    
 </style> -->
-<body>
+  <body>
     <div id="dashboard">
-        <div id="logo">
-            <img src="https://i.ibb.co/KGHF5hJ/IMG-20221109-095901.png" alt="">
-            <h1>Pacifico Admin</h1>
-        </div>
-        <div id="search_div">
-            <input type="search" id="search" placeholder="Search for product">
-        </div>
-        <div id="sorting">
-            <button id="lh">Low - High</button>
-            <button id="lt">Products less than 2000</button>
-            <button id="hl">High - Low</button>
-            <button id="gt">Products greater than 2000</button>
-        </div>
-        <div id="elements">
-            <h3 id="order">Orders</h3>
-            <h3 id="product_list">Product List</h3>
-            <h3 id="add_product">Add Products</h3>
-            <h3 id="customer">Customers</h3>
-        </div>
+      <div id="logo">
+        <img src="https://i.ibb.co/KGHF5hJ/IMG-20221109-095901.png" alt="" />
+        <h1>Pacifico Admin</h1>
+      </div>
+      <div id="search_div">
+        <input type="search" id="search" placeholder="Search for product" />
+      </div>
+      <div id="sorting">
+        <button id="lh">Low - High</button>
+        <button id="lt">Products less than 2000</button>
+        <button id="hl">High - Low</button>
+        <button id="gt">Products greater than 2000</button>
+      </div>
+      <div id="elements">
+        <h3 id="order">Orders</h3>
+        <h3 id="product_list">Product List</h3>
+        <h3 id="add_product">Add Products</h3>
+        <h3 id="customer">Customers</h3>
+      </div>
     </div>
     <div id="display">
-        <div id="order_div">
-            <table class="table_content">
-                <thead>
-                    <tr>
-                        <th>Order</th>
-                        <th>customer</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody id="order_body">
-                    <!-- <tr>
+      <div id="order_div">
+        <table class="table_content">
+          <thead>
+            <tr>
+              <th>Order</th>
+              <th>customer</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="order_body">
+            <!-- <tr>
                         <td>#1</td>
                         <td>Lebron</td>
                         <td>200$</td>
@@ -53,21 +53,21 @@
                         <td>James</td>
                         <td>150$</td>
                     </tr> -->
-                </tbody>
-            </table>
-        </div>
-        <div id="product_list_div">
-            <table class="table_content">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Category</th>
-                        <th>Status</th>
-                        <th>Inventory</th>
-                    </tr>
-                </thead>
-                <tbody id="product_list_body">
-                    <!-- <tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="product_list_div">
+        <table class="table_content">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Inventory</th>
+            </tr>
+          </thead>
+          <tbody id="product_list_body">
+            <!-- <tr>
                         <td>Nike T-Shirt</td>
                         <td>T-Shirt</td>
                         <td>Published</td>
@@ -85,28 +85,28 @@
                         <td>Published</td>
                         <td>65</td>
                     </tr> -->
-                </tbody>
-            </table>
-        </div>
-        <div id="add_product_div">
-            <!-- <input type="text" id="p_name" placeholder="Name"><br>
+          </tbody>
+        </table>
+      </div>
+      <div id="add_product_div">
+        <!-- <input type="text" id="p_name" placeholder="Name"><br>
             <input type="text" id="p_type" placeholder="Type"><br>
             <input type="number" id="p_price" placeholder="Price"><br>
             <input type="number" id="p_stock" placeholder="Stock"><br>
             <input type="text" id="p_image" placeholder="Image url"><br>
             <button id="p_add">Add Product</button> -->
-        </div>
-        <div id="customers_div">
-            <table class="table_content">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Number of Orders</th>
-                    </tr>
-                </thead>
-                <tbody id="customer_body">
-                    <!-- <tr>
+      </div>
+      <div id="customers_div">
+        <table class="table_content">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Number of Orders</th>
+            </tr>
+          </thead>
+          <tbody id="customer_body">
+            <!-- <tr>
                         <td>Lebron</td>
                         <td>lebron@pacifico.com</td>
                         <td>2</td>
@@ -116,15 +116,14 @@
                         <td>lewis@amg.com</td>
                         <td>4</td>
                     </tr> -->
-                </tbody>
-            </table>
-        </div>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div id="sorted_data">
-
-    </div>
-
-    <button id="user_btn">Go to User-Panel</button>
-</body>
+    <div id="sorted_data"></div>
+    <a href="http://127.0.0.1:5501/index.html">
+      <button id="user_btn">Go to User-Panel</button>
+    </a>
+  </body>
 </html>
 <script type="module" src="./scripts/admin.js"></script>

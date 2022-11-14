@@ -16,9 +16,9 @@ const detail = async (value) => {
         lang: "en",
       },
       headers: {
-        "X-RapidAPI-Key": "ac6ca5b643msh3d3bf01d93278adp1458dfjsn66f2b23af94c",
-        "X-RapidAPI-Host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
-      },
+        'X-RapidAPI-Key': '682a7ad57emsh9e7018ffbddc7e4p172c38jsnf2c8439c28a3',
+        'X-RapidAPI-Host': 'apidojo-hm-hennes-mauritz-v1.p.rapidapi.com'
+      }
     }
   );
 
@@ -138,18 +138,28 @@ function Append(info) {
   parent.append(p_name, p_price, color, pImage_div);
 
   let cart = document.getElementById("cart");
-  cart.addEventListener("click", () => {
+  cart.addEventListener("click", (event) => {
     let size = document.getElementById("size").value;
     console.log(size);
     pro_prices[3] = size
     console.log("added to cart", pro_prices);
     localStorage.setItem('p_details', JSON.stringify(pro_prices))
+    if (event.target.textContent == 'Added to Cart') {
+    } else {
+      event.target.textContent = 'Added to Cart'
+      event.target.style.color = 'white'
+      addCartData()
+    }
 
-    addCartData()
   });
   let wishlist = document.getElementById("wishlist");
-  wishlist.addEventListener("click", () => {
+  wishlist.addEventListener("click", (event) => {
     console.log("added to wishlist");
+    console.log(event.target);
+    event.target.style.backgroundColor = '#535766'
+    event.target.innerText = 'Wishlisted'
+    event.target.style.color = 'white'
+
 
     addWishData()
   });
@@ -194,6 +204,7 @@ const addWishData = async () => {
 }
 
 const addCartData = async () => {
+
 
   // loader should start
   document.getElementById('loder').classList = 'loder'

@@ -219,7 +219,7 @@ const fetching = async (value) => {
         lang: "en",
       },
       headers: {
-        'X-RapidAPI-Key': 'ac6ca5b643msh3d3bf01d93278adp1458dfjsn66f2b23af94c',
+        'X-RapidAPI-Key': '682a7ad57emsh9e7018ffbddc7e4p172c38jsnf2c8439c28a3',
         'X-RapidAPI-Host': 'apidojo-hm-hennes-mauritz-v1.p.rapidapi.com'
       }
     }

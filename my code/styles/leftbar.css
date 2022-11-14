@@ -7,25 +7,32 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "Inter", sans-serif;
-  border: 1px solid red;
+  border: 1px solid rgb(223, 220, 220);
   width: 15.5%;
   line-height: 1.5rem;
   gap: 20px;
+  position: fixed;
+  height: 100vh;
+  /* justify-content: flex-start; */
 }
 
 #section {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 87%;
   padding: 20px 0;
+  /* border-bottom: 1px solid rgb(215, 212, 212); */
 }
 #section > div {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   /* padding: 15px 0; */
   /* padding: 10px; */
   padding: 6px 5px;
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+}
+#section > div:hover {
+  background-color: rgb(220, 220, 220);
 }
 #section span:first-child {
   /* font-size: 30px; */
@@ -50,7 +57,9 @@ svg {
 #mainLogo {
   display: flex;
   height: 50px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
+  margin-right: 60px;
+  margin-top: 10px;
 }
 #mainLogo img {
   height: 100%;

@@ -3,7 +3,33 @@
 // let dash = document.getElementById("logo")
 // dash.innerHTML = navbar();
 
-
+// let arr = ['kumpratap562@gmail.com', , 'ram53243@gmail.com']
+// let clr = ['pink', 'orange']
+// let team = document.getElementById('team')
+// arr.forEach((el, i) => {
+//     let div = document.createElement('div')
+//     let cir = document.createElement('div')
+//     let p = document.createElement('p')
+//     cir.style.width = '20px'
+//     cir.style.height = '20px'
+//     cir.innerText = el.slice(0, 2)
+//     cir.style.borderRadius = '50%'
+//     cir.style.backgroundColor = clr[i]
+//     p.innerText = el
+//     cir.id = 'sml'
+//     div.append(cir, p)
+//     div.style.display = 'flex'
+//     div.style.flexDirection = 'row'
+//     team.append(div)
+// })
+let sec = document.querySelectorAll('#section > div')
+sec.forEach((el) => {
+    console.log(el)
+    el.Onlick = () => {
+        el.style.backgroundColor = 'rgb(220, 220, 220)'
+        console.log((object));
+    }
+})
 let display_div = document.getElementById("display")
 
 
@@ -158,6 +184,7 @@ customers_div_btn.onclick = () => {
     order_div.style.display = "none"
     product_list_div.style.display = "none"
     add_product_div.style.display = "none"
+    // customers_div_btn.style.backgroundColor = 'rgb(220, 220, 220)'
     // customers_div.style.display = "block"
     customers()
 }
@@ -217,6 +244,8 @@ const searchFun = async (e) => {
     console.log(postData)
     appendSearch(postData)
 }
+
+
 
 const appendSearch = async (data) => {
     let sort_div = document.getElementById("sorted_data")

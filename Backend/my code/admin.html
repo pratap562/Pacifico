@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/admin.css" />
+    <title>admin-panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/leftbar.css" />
+  </head>
+  <!-- <style>
+   
+    
+</style> -->
+
+  <body>
+    <div id="bigContainer">
+      <div id="leftBar">
+        <div id="mainLogo">
+          <img src="./Pacifico.png" alt="" />
+          <p>Pacifico Store</p>
+        </div>
+
+        <div id="section">
+          <div id="order">
+            <span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 3V21"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M17 6H9.5C8.57174 6 7.6815 6.31607 7.02513 6.87868C6.36875 7.44129 6 8.20435 6 9C6 9.79565 6.36875 10.5587 7.02513 11.1213C7.6815 11.6839 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3161 16.9749 12.8787C17.6313 13.4413 18 14.2044 18 15C18 15.7956 17.6313 16.5587 16.9749 17.1213C16.3185 17.6839 15.4283 18 14.5 18H6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span>Orders</span>
+          </div>
+          <div id="product_list">
+            <span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.4843 14.1202L14.1264 20.4797C13.9617 20.6447 13.7661 20.7755 13.5509 20.8648C13.3356 20.9541 13.1048 21 12.8717 21C12.6387 21 12.4079 20.9541 12.1926 20.8648C11.9773 20.7755 11.7817 20.6447 11.617 20.4797L4 12.8696V4H12.8673L20.4843 11.619C20.8146 11.9514 21 12.401 21 12.8696C21 13.3383 20.8146 13.7879 20.4843 14.1202V14.1202Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M9 9H9.01006"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span>Products</span>
+          </div>
+          <div id="customer">
+            <span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span>Customer</span>
+          </div>
+          <div id="add_product">
+            <span>+</span>
+            <span>Add Product</span>
+          </div>
+          <div id="discounts">
+            <span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 16L16 10"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M11.1339 9.36612C11.622 9.85427 11.622 10.6457 11.1339 11.1339C10.6457 11.622 9.85427 11.622 9.36612 11.1339C8.87796 10.6457 8.87796 9.85427 9.36612 9.36612C9.85427 8.87796 10.6457 8.87796 11.1339 9.36612Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M17.1339 14.9491C17.622 15.4373 17.622 16.2287 17.1339 16.7169C16.6457 17.205 15.8543 17.205 15.3661 16.7169C14.878 16.2287 14.878 15.4373 15.3661 14.9491C15.8543 14.461 16.6457 14.461 17.1339 14.9491Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M5.5 16C3.65917 16 2.5 14.8408 2.5 13V6C2.5 4.15917 3.9925 2.9165 5.83333 2.9165H14.1667C16.0075 2.9165 17.5 4.15917 17.5 6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span>Discounts</span>
+          </div>
+          <div id="giftCards">
+            <span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="color: green"
+              >
+                <path
+                  d="M19 11.5V19.5H5V11.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M21 7.5H3V11.5H21V7.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M12 19.5V7.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M12 7.5H8.14286C7.57454 7.5 7.02949 7.23661 6.62763 6.76777C6.22576 6.29893 6 5.66304 6 5C6 4.33696 6.22576 3.70107 6.62763 3.23223C7.02949 2.76339 7.57454 2.5 8.14286 2.5C11.1429 2.5 12 7.5 12 7.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M12 7.5H15.8571C16.4255 7.5 16.9705 7.23661 17.3724 6.76777C17.7742 6.29893 18 5.66304 18 5C18 4.33696 17.7742 3.70107 17.3724 3.23223C16.9705 2.76339 16.4255 2.5 15.8571 2.5C12.8571 2.5 12 7.5 12 7.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span>Gift Cards</span>
+          </div>
+          <div id="pricings">
+            <span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.75 7.5H2.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M3.75 12.5H2.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M3.33366 10H1.66699"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M4.69727 4.6967C5.74616 3.64781 7.08253 2.9335 8.53739 2.64411C9.99225 2.35472 11.5002 2.50325 12.8707 3.07091C14.2411 3.63856 15.4125 4.59986 16.2366 5.83323C17.0607 7.0666 17.5006 8.51664 17.5006 10C17.5006 11.4834 17.0607 12.9334 16.2366 14.1668C15.4125 15.4001 14.2411 16.3614 12.8707 16.9291C11.5002 17.4968 9.99225 17.6453 8.53739 17.3559C7.08253 17.0665 5.74616 16.3522 4.69727 15.3033"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M10 6.25V7.00737"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M8.125 8.52196C8.17767 8.07456 8.40336 7.66555 8.75379 7.38246C9.10421 7.09936 9.55152 6.96468 10 7.00722"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M10 13.7501V12.9927"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M11.875 11.4778C11.8223 11.9252 11.5966 12.3343 11.2462 12.6174C10.8958 12.9004 10.4485 13.0351 10 12.9926"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M11.8273 8.19148C11.6899 7.8243 11.4381 7.51099 11.1091 7.29776C10.7801 7.08453 10.3913 6.98266 10 7.00718"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M8.17188 11.8083C8.30928 12.1755 8.56105 12.4888 8.89004 12.702C9.21904 12.9152 9.60785 13.0171 9.99913 12.9926"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M8.125 8.52216C8.125 8.83316 8.23276 9.13455 8.42993 9.37506C8.6271 9.61556 8.90151 9.78033 9.20647 9.84132L10.7935 10.1587C11.0985 10.2197 11.3729 10.3845 11.5701 10.625C11.7672 10.8655 11.875 11.1669 11.875 11.4779"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span>Pricing</span>
+          </div>
+          <div id="setings">
+            <span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.1952 3H11.8048C11.3342 3 10.8829 3.18964 10.5502 3.52721C10.2174 3.86477 10.0305 4.32261 10.0305 4.8V4.962C10.0302 5.27765 9.94806 5.58767 9.79235 5.86095C9.63663 6.13424 9.41282 6.36117 9.14336 6.519L8.76188 6.744C8.49215 6.90198 8.18618 6.98515 7.87472 6.98515C7.56327 6.98515 7.2573 6.90198 6.98757 6.744L6.8545 6.672C6.44735 6.43374 5.96365 6.3691 5.50957 6.49228C5.05549 6.61546 4.66815 6.91638 4.43256 7.329L4.23739 7.671C4.00252 8.08404 3.93881 8.57475 4.06023 9.0354C4.18165 9.49605 4.47828 9.889 4.88501 10.128L5.01808 10.218C5.28625 10.3751 5.50923 10.6006 5.66486 10.8721C5.8205 11.1437 5.90337 11.4519 5.90524 11.766V12.225C5.90648 12.5422 5.82508 12.8541 5.66929 13.1291C5.5135 13.4041 5.28885 13.6324 5.01808 13.791L4.88501 13.872C4.47828 14.111 4.18165 14.5039 4.06023 14.9646C3.93881 15.4253 4.00252 15.916 4.23739 16.329L4.43256 16.671C4.66815 17.0836 5.05549 17.3845 5.50957 17.5077C5.96365 17.6309 6.44735 17.5663 6.8545 17.328L6.98757 17.256C7.2573 17.098 7.56327 17.0148 7.87472 17.0148C8.18618 17.0148 8.49215 17.098 8.76188 17.256L9.14336 17.481C9.41282 17.6388 9.63663 17.8658 9.79235 18.139C9.94806 18.4123 10.0302 18.7223 10.0305 19.038V19.2C10.0305 19.6774 10.2174 20.1352 10.5502 20.4728C10.8829 20.8104 11.3342 21 11.8048 21H12.1952C12.6658 21 13.1171 20.8104 13.4498 20.4728C13.7826 20.1352 13.9695 19.6774 13.9695 19.2V19.038C13.9698 18.7223 14.0519 18.4123 14.2077 18.139C14.3634 17.8658 14.5872 17.6388 14.8566 17.481L15.2381 17.256C15.5078 17.098 15.8138 17.0148 16.1253 17.0148C16.4367 17.0148 16.7427 17.098 17.0124 17.256L17.1455 17.328C17.5527 17.5663 18.0364 17.6309 18.4904 17.5077C18.9445 17.3845 19.3319 17.0836 19.5674 16.671L19.7626 16.32C19.9975 15.907 20.0612 15.4163 19.9398 14.9556C19.8184 14.4949 19.5217 14.102 19.115 13.863L18.9819 13.791C18.7111 13.6324 18.4865 13.4041 18.3307 13.1291C18.1749 12.8541 18.0935 12.5422 18.0948 12.225V11.775C18.0935 11.4578 18.1749 11.1459 18.3307 10.8709C18.4865 10.5959 18.7111 10.3676 18.9819 10.209L19.115 10.128C19.5217 9.889 19.8184 9.49605 19.9398 9.0354C20.0612 8.57475 19.9975 8.08404 19.7626 7.671L19.5674 7.329C19.3319 6.91638 18.9445 6.61546 18.4904 6.49228C18.0364 6.3691 17.5527 6.43374 17.1455 6.672L17.0124 6.744C16.7427 6.90198 16.4367 6.98515 16.1253 6.98515C15.8138 6.98515 15.5078 6.90198 15.2381 6.744L14.8566 6.519C14.5872 6.36117 14.3634 6.13424 14.2077 5.86095C14.0519 5.58767 13.9698 5.27765 13.9695 4.962V4.8C13.9695 4.32261 13.7826 3.86477 13.4498 3.52721C13.1171 3.18964 12.6658 3 12.1952 3Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span>Settings</span>
+          </div>
+        </div>
+
+        <div id="team"></div>
+      </div>
+      <div id="rightBar">
+        <div id="dashboard">
+          <!-- <div id="logo">
+            <img
+              src="https://i.ibb.co/KGHF5hJ/IMG-20221109-095901.png"
+              alt=""
+            />
+            <h1>Pacifico Admin</h1>
+          </div> -->
+          <div id="search_div">
+            <input type="search" id="search" placeholder="Search for product" />
+          </div>
+          <div id="sorting">
+            <button id="lh">Low - High</button>
+            <button id="lt">Products less than 2000</button>
+            <button id="hl">High - Low</button>
+            <button id="gt">Products greater than 2000</button>
+          </div>
+          <!-- <div id="elements">
+            <h3 id="order">Order</h3>
+            <h3 id="product_list">Product List</h3>
+            <h3 id="add_product">Add Products</h3>
+            <h3 id="customer">Customers</h3>
+          </div> -->
+        </div>
+        <div id="display">
+          <div id="order_div">
+            <table class="table_content">
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>customer</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="order_body">
+                <!-- <tr>
+                                <td>#1</td>
+                                <td>Lebron</td>
+                                <td>200$</td>
+                            </tr>
+                            <tr>
+                                <td>#2</td>
+                                <td>James</td>
+                                <td>150$</td>
+                            </tr> -->
+              </tbody>
+            </table>
+          </div>
+          <div id="product_list_div">
+            <table class="table_content">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                  <th>Inventory</th>
+                </tr>
+              </thead>
+              <tbody id="product_list_body">
+                <!-- <tr>
+                                <td>Nike T-Shirt</td>
+                                <td>T-Shirt</td>
+                                <td>Published</td>
+                                <td>499</td>
+                            </tr>
+                            <tr>
+                                <td>H&M-trousers</td>
+                                <td>Trousers</td>
+                                <td>Yet to be published</td>
+                                <td>277</td>
+                            </tr>
+                            <tr>
+                                <td>Wildcraft-Sweatshirt</td>
+                                <td>Winter Wear</td>
+                                <td>Published</td>
+                                <td>65</td>
+                            </tr> -->
+              </tbody>
+            </table>
+          </div>
+          <div id="add_product_div">
+            <!-- <input type="text" id="p_name" placeholder="Name"><br>
+                    <input type="text" id="p_type" placeholder="Type"><br>
+                    <input type="number" id="p_price" placeholder="Price"><br>
+                    <input type="number" id="p_stock" placeholder="Stock"><br>
+                    <input type="text" id="p_image" placeholder="Image url"><br>
+                    <button id="p_add">Add Product</button> -->
+          </div>
+          <div id="customers_div">
+            <table class="table_content">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Number of Orders</th>
+                </tr>
+              </thead>
+              <tbody id="customer_body">
+                <!-- <tr>
+                                <td>Lebron</td>
+                                <td>lebron@pacifico.com</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Lewis</td>
+                                <td>lewis@amg.com</td>
+                                <td>4</td>
+                            </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="sorted_data"></div>
+
+        <!-- <button id="user_btn">Go to User-Panel</button> -->
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module" src="./scripts/admin.js"></script>

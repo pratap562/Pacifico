@@ -229,13 +229,21 @@ const addCartData = async () => {
     window.location.href = "signup.html"
   }
   else {
-    let res = await fetch(`http://localhost:3000/Cart`, {
-      method: "POST",
-      body: JSON.stringify(send_data),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
+    try {
+      let res = await fetch(`http://localhost:3000/Cart`, {
+        method: "POST",
+        body: JSON.stringify(send_data),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+
+    } catch (err) {
+      // console.log("err", err);
+      document.getElementById('loder').classList.remove('loder')
+      document.getElementById('spin').classList.remove('spin')
+      alert('please run db.json file because we are saving cart data into our local db.json using json server you can get db.json file inside our backend folder of github repo https://github.com/pratap562/pacific-clam-4161 ')
+    }
   }
   document.getElementById('loder').classList.remove('loder')
   document.getElementById('spin').classList.remove('spin')

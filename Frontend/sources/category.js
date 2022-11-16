@@ -212,7 +212,7 @@ console.log('sahi aj jaj')
 const fetching = async (value) => {
 
   let res = await fetch(
-    `https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=${value}&pagesize=5&currentpage=1&`,
+    `https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=${value}&pagesize=20&currentpage=1&`,
     {
       params: {
         country: "in",

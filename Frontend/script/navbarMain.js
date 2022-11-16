@@ -70,6 +70,160 @@ const sportWear = [
     { name: "Jackets", value: null },
 ]
 
+
+const wmnFstDiv = [
+    { name: "Holiday & Trending Now", value: null },
+    { name: "Holiday & Trending Now", value: null },
+    { name: "The Holiday Shop", value: "ladies_christmas" },
+    { name: "Winter must-haves", value: "ladies_winter" },
+    { name: "Trend edit", value: "ladies_trendconcept" },
+    { name: "A new minimalism", value: "ladies_neutral" },
+    { name: "Y2K fashion", value: "Y2k_s5" },
+    { name: "Sunny Styles", value: "NAL_LOCAL_EQ" }
+]
+
+const wmnSndDiv = [
+    { name: "Shop by Product", value: null },
+    { name: "View All", value: "ladies_all" },
+    { name: "Dresses", value: "ladies_dresses" },
+    { name: "Cardigans & Sweaters", value: "ladies_cardigansjumpers" },
+    { name: "Basics", value: "ladies_basics" },
+    { name: "Lingerie", value: "ladies_lingerie" },
+    { name: "Loungewear", value: "ladies_loungewear" },
+    { name: "Sleepwear", value: "ladies_nightwear" },
+    { name: "Sportswear", value: "ladies_sport" },
+    { name: "Maternity Wear", value: "ladies_maternity" },
+    { name: "Premium Selection", value: "ladies_premium_selection" },
+    { name: "Beauty", value: "ladies_beauty" },
+    { name: "Accessories", value: "ladies_accessories" },
+    // { name: "Care products", value: "ladies_takecare" }
+    // { name:, value:},
+]
+const wmnTopDiv = [
+    { name: "Top Wear", value: null },
+    { name: "Blazers & Vests", value: "ladies_blazerswaistcoats" },
+    { name: "Hoodies & Sweatshirts", value: "ladies_hoodiessweatshirts" },
+    { name: "Overalls & Jumpsuits", value: "ladies_jumpsuits" },
+    { name: "Shirts & Blouses", value: "ladies_shirtsblouses" },
+    { name: "Jackets & Coats", value: "ladies_jacketscoats" },
+    { name: "Tops", value: "ladies_tops" },
+    { name: "Skirts", value: "ladies_skirts" },
+]
+
+const wmnBotDiv = [
+    { name: "Bottom Wear", value: null },
+    { name: "Pants", value: "ladies_trousers" },
+    { name: "Shorts", value: "ladies_shorts" },
+    { name: "Jeans", value: "ladies_jeans" },
+    { name: "Shoes", value: "ladies_shoes" },
+    { name: "Socks & Tights", value: "ladies_sockstights" },
+    { name: "Swimwear & Beachwear", value: "ladies_swimwear" },
+    { name: "Plus Sizes", value: "ladies_plus" },
+
+
+]
+
+const wmnThirdDiv = [
+    { name: "Shop by Occasion", value: null },
+    { name: "Wedding", value: "ladies_occasion_wedding" },
+    { name: "Party Wear", value: "ladies_occasion_partywear" },
+    { name: "Office Wear", value: "ladies_occasion_officewear" }
+]
+
+
+const kidGirlSml = [
+    { name: "Girls (2-8Y)", value: null },
+    { name: "View all", value: "kids_girls_viewall" },
+    { name: "New Arrivals", value: "kids_girls_newarrivals" },
+    { name: "Clothing", value: "kids_girls_clothing" },
+    { name: "Outerwear", value: "kids_girls_outerwear" },
+    { name: "Activewear", value: "kids_girls_sportswear" },
+    { name: "Accessories", value: "kids_girls_accessories" },
+    { name: "Shoes", value: "kids_girls_shoes" },
+    { name: "Costumes", value: null }
+
+]
+
+const kidBoySml = [
+    { name: "Boys (2-8Y)", value: null },
+    { name: "View all", value: "kids_boys_viewall" },
+    { name: "New Arrivals", value: "kids_boys_newarrivals" },
+    { name: "Clothing", value: "kids_boys_clothing" },
+    { name: "Outerwear", value: "kids_boys_outerwear" },
+    { name: "Activewear", value: "kids_boys_sportswear" },
+    { name: "Accessories", value: "kids_boys_accessories" },
+    { name: "Shoes", value: "kids_boys_shoes" },
+    { name: "Costumes", value: null }
+]
+
+const kidGirlBig = [
+    { name: "Girls (9-14Y)", value: null },
+    { name: "View all", value: "kids_oldergirls_viewall" },
+    { name: "New Arrivals", value: "kids_oldergirls_newarrivals" },
+    { name: "Clothing", value: "kids_oldergirls_clothing" },
+    { name: "Outerwear", value: "kids_oldergirls_outerwear" },
+    { name: "Activewear", value: "kids_oldergirls_sportswear" },
+    { name: "Accessories", value: "kids_oldergirls_accessories" },
+    { name: "Shoes", value: "kids_oldergirls_shoes" },
+    { name: "Costumes", value: null }
+]
+
+const kidBoyBig = [
+    { name: "Boys (9-14Y)", value: null },
+    { name: "View all", value: "kids_olderboys_viewall" },
+    { name: "New Arrivals", value: "kids_olderboys_newarrivals" },
+    { name: "Clothing", value: "kids_olderboys_clothing" },
+    { name: "Outerwear", value: "kids_olderboys_outerwear" },
+    { name: "Activewear", value: "kids_olderboys_sportswear" },
+    { name: "Accessories", value: "kids_olderboys_accessories" },
+    { name: "Shoes", value: "kids_olderboys_shoes" },
+    { name: "Costumes", value: null },
+    { name: "Party Occasion", value: "kids_olderboys_viewall" }
+]
+
+
+const kidShopByProd = [
+    { name: "Shop by Product", value: null },
+    { name: "View all", value: "kids_viewall" },
+    { name: "New Arrivals", value: "kids_newarrivals" },
+    { name: "Clothing", value: "kids_clothing" },
+    { name: "Outerwear", value: "kids_outerwear" },
+    { name: "Activewear", value: "kids_sportswear" },
+    { name: "Accessories", value: "kids_accessories" },
+    { name: "Shoes", value: "kids_shoes" },
+    { name: "Costumes", value: null }
+]
+
+const kidsPopular = [
+    { name: "Popular Now", value: null },
+    { name: "winter", value: "WK44_Kids_WellDressed_Shop" },
+    { name: "kids-exclusive", value: "kids_kids_exclusive" },
+    { name: "character", value: "kids_characters" },
+    { name: "basics", value: "kids_basic" },
+    { name: "holiday", value: "kids_christmas" }
+]
+
+const kidAllData = [
+    [kidShopByProd],
+    [kidBoyBig],
+    [kidGirlBig],
+    [kidsPopular]
+]
+
+
+
+const babyAllData = [
+    [kidGirlSml],
+    [kidBoySml]
+]
+
+const wmnAllData = [
+    [wmnBotDiv, wmnThirdDiv],
+    [wmnSndDiv],
+    [wmnFstDiv],
+    [wmnTopDiv]
+]
+
 const manAllData = [
     [manTopWear, extraIndianFest],
     [botManWear, menSndDiv],
@@ -97,20 +251,21 @@ window.onload = () => {
             // document.querySelector('#prod-container').style.backgroundColor = '#1E1E1E'
             // document.querySelector('body').style.filter = 'blur(0px)'
             // document.querySelector('#header').style.filter = 'blur(0px)'
-            let cat = el.children[0].innerText == 'MEN'
+            let cat = el.children[0].innerText
             let mainBannerData
             if (cat == 'MEN') {
                 mainBannerData = manAllData
             } else if (cat == 'WOMEN') {
-                mainBannerData = manAllData
+                mainBannerData = wmnAllData
             } else if (cat == 'KIDS') {
-                mainBannerData = manAllData
-            } else if (cat == 'HOME & LIVING') {
-                mainBannerData = manAllData
+                mainBannerData = kidAllData
+            } else if (cat == 'BABY') {
+                mainBannerData = babyAllData
             } else {
-                mainBannerData = manAllData
+                // mainBannerData = manAllData
             }
 
+            console.log(mainBannerData)
             el.style.borderBottom = ' 3px solid red'
             let mainBanner = el.children[1]
             mainBanner.innerHTML = null

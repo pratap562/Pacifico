@@ -234,4 +234,9 @@ button {
 
 #upperbar > div:first-child {
   height: 78px;
+  margin-left: 20px;
+}
+
+#upperbar a img {
+  width: 40%;
 }

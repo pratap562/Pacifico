@@ -1,0 +1,44 @@
+#add_product {
+  margin: 5% 25% 0 25%;
+  display: grid;
+  padding: 4%;
+  background-color: beige;
+}
+#add_product input {
+  padding: 4%;
+  border-radius: 5px;
+  background-color: wheat;
+}
+button {
+  width: 40%;
+  padding: 4%;
+  border-radius: 10px;
+  margin: 10% 0 0 5%;
+  color: whitesmoke;
+  background-color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+#logo {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+#logo > h1 {
+  text-align: center;
+  /* margin-top: 10%; */
+  margin-left: 1%;
+  color: rgb(150, 49, 166);
+}
+#logo > img {
+  height: 2%;
+  width: 3%;
+  /* margin-left: 30%; */
+  margin-top: 1.5%;
+}
+h3 {
+  text-align: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}

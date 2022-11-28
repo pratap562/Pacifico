@@ -1,0 +1,51 @@
+#container {
+  display: flex;
+  flex-flow: column;
+  width: 60%;
+  margin: 3% 40% 0 40%;
+  /* background-color: beige; */
+  padding: 3%;
+}
+input {
+  width: 30%;
+}
+#container input {
+  margin-bottom: 2%;
+  padding: 1%;
+  border-radius: 5px;
+}
+#email {
+  margin-top: 5%;
+}
+#login {
+  width: 30%;
+  margin-top: 2%;
+  padding: 1.5%;
+  border-radius: 7px;
+  background-color: rgb(114, 49, 166);
+  color: wheat;
+  cursor: pointer;
+}
+#logo {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+#logo > h1 {
+  text-align: center;
+  /* margin-top: 10%; */
+  margin-left: 1%;
+  color: rgb(150, 49, 166);
+}
+#logo > img {
+  height: 2%;
+  width: 3%;
+  /* margin-left: 30%; */
+  margin-top: 1.5%;
+}
+h3 {
+  text-align: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}

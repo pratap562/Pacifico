@@ -31,25 +31,31 @@ class user {
 
             const register_api = 'https://masai-api-mocker.herokuapp.com/auth/register'
 
-            const response = await fetch(register_api, {
-                method: 'POST',
-                // mode: 'cors',
-                body: JSON.stringify(this),
-                headers: {
-                    'Content-Type': 'application/json'
+            try {
+                const response = await fetch(register_api, {
+                    method: 'POST',
+                    // mode: 'cors',
+                    body: JSON.stringify(this),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                const result = await response.json()
+                console.log(result)
+                if (result.error) {
+                    console.log('nahi hoga bhai tererere')
+                    document.getElementById('error').style.display = 'flex'
+                    document.getElementById('error').innerText = result.message
+                    document.getElementById('email').style = "text-decoration: underline wavy red"
+
+                } else {
+                    location = './signin.html'
                 }
-            })
 
-            const result = await response.json()
-            console.log(result)
-            if (result.error) {
-                document.getElementById('error').style.display = 'flex'
-                document.getElementById('error').innerText = result.message
-                document.getElementById('email').style = "text-decoration: underline wavy red"
-
-            } else {
-                location = './signin.html'
+            } catch (err) {
+                console.log(err)
             }
+
             // window.location.href = './signin.html'
 
 

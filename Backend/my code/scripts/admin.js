@@ -62,27 +62,33 @@ orderBtn.onclick = () => {
 const orders = async () => {
     order_div.style.display = "block";
 
-    let res = await fetch(`http://localhost:3000/orders`)
-    let data = await res.json()
-    let div = document.getElementById("order_body")
-    div.innerHTML = null
-    data = data.reverse()
-    data.forEach((el, i) => {
+    try {
+        let res = await fetch(`http://localhost:3000/orders`)
+        let data = await res.json()
+        let div = document.getElementById("order_body")
+        div.innerHTML = null
+        data = data.reverse()
+        data.forEach((el, i) => {
 
-        let tr = document.createElement("tr")
+            let tr = document.createElement("tr")
 
-        let td1 = document.createElement("td")
-        td1.textContent = `#${i + 1}`;
+            let td1 = document.createElement("td")
+            td1.textContent = `#${i + 1}`;
 
-        let td2 = document.createElement("td")
-        td2.textContent = el.email;
+            let td2 = document.createElement("td")
+            td2.textContent = el.email;
 
-        let td3 = document.createElement("td")
-        td3.textContent = el.amount
+            let td3 = document.createElement("td")
+            td3.textContent = el.amount
 
-        tr.append(td1, td2, td3)
-        div.append(tr)
-    })
+            tr.append(td1, td2, td3)
+            div.append(tr)
+        })
+
+    } catch (err) {
+        alert('please run db.json file because we are saving cart data into our local db.json using json server you can get db.json file inside our backend folder of github repo https://github.com/pratap562/pacific-clam-4161 ')
+        console.log('err', err)
+    }
 }
 display_div.style.display = orders()
 // orders()

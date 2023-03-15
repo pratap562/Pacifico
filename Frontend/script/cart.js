@@ -39,7 +39,7 @@
 // var cartarr = JSON.parse(localStorage.getItem("BagListObj")) || [];
 const fetchingFun = async () => {
   let usrDetail = JSON.parse(localStorage.getItem("userDetail"))
-  let res = await fetch(`http://localhost:3000/Cart?customer_Id=${usrDetail.token}`)
+  let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/Cart?customer_Id=${usrDetail.token}`)
   let data = await res.json()
   console.log(data)
   // fetchingFun(data)
@@ -145,7 +145,7 @@ const append = (cartarr) => {
   async function removeitem(ind, id, event) {
     cartarr.splice(ind, 1);
     // localStorage.setItem("BagListObj", JSON.stringify(cartarr));
-    let res = await fetch(`http://localhost:3000/Cart/${id}`, {
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/Cart/${id}`, {
       method: 'DELETE'
     })
     // console.log(event.target.parentNode.parentNode.remove());
@@ -163,7 +163,7 @@ const append = (cartarr) => {
 document.querySelector(".makeorder").addEventListener("click", profile);
 document.querySelector(".apply").addEventListener("click", discountfun);
 function profile() {
-  window.location.href = "../payment.html";
+  window.location.href = "./payment.html";
 }
 
 function discountfun() {

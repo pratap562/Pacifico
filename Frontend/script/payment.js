@@ -24,15 +24,28 @@ const endfunct = async (el) => {
     amount
   }
 
-  let res = await fetch(`http://localhost:3000/orders`, {
+  let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/orders`, {
     method: "POST",
     body: JSON.stringify(send_data),
     headers: {
       "Content-Type": "application/json"
     }
   })
-  let data = await res.json()
-  console.log(data)
+  const emptyCart = async () => {
+    let usrDetail = JSON.parse(localStorage.getItem("userDetail"))
+    console.log(`https://busy-gold-dhole-boot.cyclic.app/Cart?customer_Id=${usrDetail.token}&id=4`);
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/Cart?customer_Id=${usrDetail.token}`)
+    let data = await res.json()
+    console.log(data)
+    data.forEach(async (pd, i) => {
+      console.log(`https://busy-gold-dhole-boot.cyclic.app/Cart/${pd.id}`, 'lllll');
+      let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/Cart/${pd.id}`, {
+        method: 'DELETE'
+      })
+      location = "./end.html";
+    })
+  }
 
-  window.location.href = "../end.html";
+  emptyCart()
+
 }

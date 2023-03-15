@@ -20,11 +20,11 @@ const addImage = async () => {
 
     let form = new FormData()
 
-    form.append("image",actual_image)
+    form.append("image", actual_image)
 
-    let res = await fetch(`https://api.imgbb.com/1/upload?key=37b5836c9415a8f88344b2e1d3787f80`,{
-        method:"POST",
-        body:form
+    let res = await fetch(`https://api.imgbb.com/1/upload?key=37b5836c9415a8f88344b2e1d3787f80`, {
+        method: "POST",
+        body: form
     })
 
     let data = await res.json();
@@ -46,15 +46,15 @@ const addProduct = async (el) => {
         category,
         price,
         inventory,
-        image:image_url,
-        status:"Published"
+        image: image_url,
+        status: "Published"
     }
 
-    let res = await fetch(`http://localhost:3000/posts`,{
-        method:"POST",
-        body:JSON.stringify(send_data),
-        headers:{
-            "Content-Type":"application/json"
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/posts`, {
+        method: "POST",
+        body: JSON.stringify(send_data),
+        headers: {
+            "Content-Type": "application/json"
         }
     })
 }

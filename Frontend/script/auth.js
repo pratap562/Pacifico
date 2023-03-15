@@ -26,30 +26,54 @@ class user {
             this.mobile = String(m);
             this.description = d;
             console.log(this)
-
             // now userData is stored and now we can send it to server show we can register our new user
 
-            const register_api = 'https://masai-api-mocker.herokuapp.com/auth/register'
+            const register_api = 'https://busy-gold-dhole-boot.cyclic.app/customer'
 
-            const response = await fetch(register_api, {
-                method: 'POST',
-                // mode: 'cors',
-                body: JSON.stringify(this),
-                headers: {
-                    'Content-Type': 'application/json'
+            try {
+                let res = await fetch(`${register_api}?email=${this.email}`)
+                let data = await res.json()
+                console.log(data);
+                if (data.length == 0) {
+                    // console.log(result, 'yes');
+                    let res = await fetch(register_api, {
+                        method: 'POST',
+                        body: JSON.stringify(this),
+                        headers: { 'content-type': 'application/json' }
+                    })
+                    console.log(res);
+                    location = './signin.html'
+                } else {
+                    document.getElementById('error').style.display = 'flex'
+                    document.getElementById('error').innerText = 'Register fail user Alredy exist sorry'
+                    document.getElementById('email').style = "text-decoration: underline wavy red"
                 }
-            })
 
-            const result = await response.json()
-            console.log(result)
-            if (result.error) {
+
+                // const response = await fetch(register_api, {
+                //     method: 'POST',
+                //     // mode: 'cors',
+                //     body: JSON.stringify(this),
+                //     headers: {
+                //         'Content-Type': 'application/json'
+                //     }
+                // })
+                // const result = await response.json()
+                // console.log(result)
+                // if (result.error) {
+                //     console.log('nahi hoga bhai tererere')
+
+                // } else {
+                //     location = './signin.html'
+                // }
+
+            } catch (err) {
                 document.getElementById('error').style.display = 'flex'
-                document.getElementById('error').innerText = result.message
-                document.getElementById('email').style = "text-decoration: underline wavy red"
-
-            } else {
-                location = './signin.html'
+                document.getElementById('error').innerText = 'Internal server error! Try after some time'
+                // document.getElementById('email').style = "text-decoration: underline wavy red"
+                console.log(err)
             }
+
             // window.location.href = './signin.html'
 
 
@@ -80,48 +104,51 @@ class user {
     }
 
     async login(u, p) {
-
+        const login_data = {
+            username: u,
+            password: p,
+        }
+        console.log(login_data, 'login_data');
+        const register_api = 'https://busy-gold-dhole-boot.cyclic.app/customer'
+        console.log(`${register_api}?email=${login_data.username}`);
         try {
-            const login_data = {
-                username: u,
-                password: p,
+            let res = await fetch(`${register_api}?email=${login_data.username}`)
+            let data = await res.json()
+            console.log(data);
+            if (data.length > 0) {
+                console.log('result', `${register_api}?email=${login_data.username}&password=${login_data.password}`);
+                let res = await fetch(`${register_api}?email=${login_data.username}&password=${login_data.password}`)
+                res = await res.json()
+                console.log(res);
+                if (res.length >= 1) {
+                    let { email, username, name } = res[0]
+                    let newData = { email, username, name, token: Math.random() }
+                    // console.log(email);
+                    console.log(newData, 'boy');
+                    localStorage.setItem('userDetail', JSON.stringify(newData))
+                    location = './'
+                    console.log('res');
+                } else {
+                    document.getElementById('error').style.display = 'flex'
+                    document.getElementById('error').innerText = 'Bad Credentials'
+                }
+            } else {
+                document.getElementById('error').style.display = 'flex'
+                document.getElementById('error').innerText = 'User dont exist'
+                document.getElementById('email').style = "text-decoration: underline wavy red"
+                setTimeout(() => {
+                    location = './signup.html'
+                }, 2000);
             }
 
-            const login_api = 'https://masai-api-mocker.herokuapp.com/auth/login'
-
-            const response = await fetch(login_api, {
-                method: 'POST',
-                // origin: '*',
-                // mode: 'cors',
-                body: JSON.stringify(login_data),
-                headers: {
-                    'Content-Type': 'application/json',
-                    // 'Access-Control-Allow-Origin': 'https://masai-api-mocker.herokuapp.com'
-                }
-            })
-
-            const data = await response.json()
-            console.log(data, 'skjdf')
-            return data
-        }
-        catch (err) {
-            console.log('errrr:', err)
+        } catch (err) {
             document.getElementById('error').style.display = 'flex'
-            document.getElementById('error').innerText = `Wrong Credentials`
-            console.log('sdfasf')
-            let loginDiv = document.getElementById('loginform')
-            loginDiv.style.animation = "user 0.1s linear 5"
-            setTimeout(() => {
-                if (loginDiv.style.removeProperty) {
-                    console.log('sahi laga')
-                    loginDiv.style.removeProperty('animation');
-                } else {
-                    console.log('sahi laga thora sa')
-                    loginDiv.style.removeAttribute('animation');
-                }
-            }, 2000);
-
+            document.getElementById('error').innerText = 'Internal server error! Try after some time'
+            // document.getElementById('email').style = "text-decoration: underline wavy red"
+            console.log(err)
         }
+
+
 
         // remove signin loader
         document.getElementById('loder').classList.remove('loder')

@@ -62,27 +62,33 @@ orderBtn.onclick = () => {
 const orders = async () => {
     order_div.style.display = "block";
 
-    let res = await fetch(`http://localhost:3000/orders`)
-    let data = await res.json()
-    let div = document.getElementById("order_body")
-    div.innerHTML = null
-    data = data.reverse()
-    data.forEach((el, i) => {
+    try {
+        let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/orders`)
+        let data = await res.json()
+        let div = document.getElementById("order_body")
+        div.innerHTML = null
+        data = data.reverse()
+        data.forEach((el, i) => {
 
-        let tr = document.createElement("tr")
+            let tr = document.createElement("tr")
 
-        let td1 = document.createElement("td")
-        td1.textContent = `#${i + 1}`;
+            let td1 = document.createElement("td")
+            td1.textContent = `#${i + 1}`;
 
-        let td2 = document.createElement("td")
-        td2.textContent = el.email;
+            let td2 = document.createElement("td")
+            td2.textContent = el.email;
 
-        let td3 = document.createElement("td")
-        td3.textContent = el.amount
+            let td3 = document.createElement("td")
+            td3.textContent = el.amount
 
-        tr.append(td1, td2, td3)
-        div.append(tr)
-    })
+            tr.append(td1, td2, td3)
+            div.append(tr)
+        })
+
+    } catch (err) {
+        alert('please run db.json file because we are saving cart data into our local db.json using json server you can get db.json file inside our backend folder of github repo https://github.com/pratap562/pacific-clam-4161 ')
+        console.log('err', err)
+    }
 }
 display_div.style.display = orders()
 // orders()
@@ -100,7 +106,7 @@ productListBtn.onclick = () => {
 const productList = async () => {
     product_list_div.style.display = "block"
 
-    let res = await fetch("http://localhost:3000/products")
+    let res = await fetch("https://busy-gold-dhole-boot.cyclic.app/products")
     let data = await res.json();
 
     let div = document.getElementById("product_list_body")
@@ -196,7 +202,7 @@ const customers = async () => {
     customers_div.style.display = "block"
 
 
-    let res = await fetch(`http://localhost:3000/customer`)
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/customer`)
     let data = await res.json()
     document.getElementById("customer_body").innerHTML = null
 
@@ -243,7 +249,7 @@ const searchFun = async (e) => {
 
     let search_term = document.getElementById("search").value;
 
-    let res = await fetch(`http://localhost:3000/products?q=${search_term}`)
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/products?q=${search_term}`)
     let postData = await res.json()
 
     console.log(postData)
@@ -291,14 +297,14 @@ sortLow.onclick = () => {
 }
 
 const lowData = async () => {
-    let res = await fetch(`http://localhost:3000/products?_sort=price&_order=asc`)
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/products?_sort=price&_order=asc`)
     let data = await res.json()
     // console.log(data)
     appendSearch(data)
 }
 
 const defaultData = async () => {
-    let res = await fetch(`http://localhost:3000/products`)
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/products`)
     let data = await res.json()
     // console.log(data)
     appendSearch(data)
@@ -311,7 +317,7 @@ sortHigh.onclick = () => {
 }
 
 const highData = async () => {
-    let res = await fetch(`http://localhost:3000/products?_sort=price&_order=desc`)
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/products?_sort=price&_order=desc`)
     let data = await res.json();
     appendSearch(data)
 }
@@ -322,7 +328,7 @@ lessThan.onclick = () => {
 }
 
 const lessData = async () => {
-    let res = await fetch(`http://localhost:3000/products?price_lte=2000`)
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/products?price_lte=2000`)
     let data = await res.json()
     // console.log(data)
     appendSearch(data)
@@ -334,7 +340,7 @@ greatThan.onclick = () => {
 }
 
 const greatData = async () => {
-    let res = await fetch(`http://localhost:3000/products?price_gte=2001`)
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/products?price_gte=2001`)
     let data = await res.json()
     // console.log(data)
     appendSearch(data)

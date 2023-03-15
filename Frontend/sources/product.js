@@ -190,7 +190,7 @@ const addWishData = async () => {
   if (customerData.token === undefined) {
     window.location.href = "signup.html"
   } else {
-    let res = await fetch(`http://localhost:3000/Whishlist`, {
+    let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/Whishlist`, {
       method: "POST",
       body: JSON.stringify(send_data),
       headers: {
@@ -230,7 +230,7 @@ const addCartData = async () => {
   }
   else {
     try {
-      let res = await fetch(`http://localhost:3000/Cart`, {
+      let res = await fetch(`https://busy-gold-dhole-boot.cyclic.app/Cart`, {
         method: "POST",
         body: JSON.stringify(send_data),
         headers: {
